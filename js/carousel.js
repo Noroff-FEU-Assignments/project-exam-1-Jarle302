@@ -22,7 +22,7 @@ function renderCarouselSlides({ title, text, imgURL, date, modified }) {
   document.querySelector(".slides--container").innerHTML += `
  <div class="slides" style="background-image:url(${imgURL}); background-size:cover;">
 
- <div><p class="slides__tag--featured">Featured</p><h2 class="slides__h2">${title}</h2> <p class="slides__p--breadtext">${text}</p></div>
+ <div class="slides--container--textbox"><p class="slides__tag--featured">Latest</p><h2 class="slides__h2">${title}</h2> <p class="slides__p--breadtext">${text}</p></div>
    `;
 }
 

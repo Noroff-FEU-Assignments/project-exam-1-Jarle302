@@ -1,16 +1,38 @@
 .slides {
   position: absolute;
   z-index: 0;
-  height: 100vh;
+  height: 85vh;
   width: 100vw;
   opacity: 0;
+  border-radius: 22px;
+}
+
+.slides--container--textbox {
+  position: relative;
+  top: 286px;
+}
+
+p {
+  text-shadow: 1px 1px 1px white;
+  color: black;
 }
 
 button {
+  position: absolute;
   z-index: 2;
+  border: none;
+  background: #00000045;
+  font-size: 2rem;
+}
+#forward--button {
+  top: 50%;
+  right: 0;
+}
+#backward--button {
+  top: 50%;
 }
 
 .active {
   opacity: 1;
-  transition: all ease-in 0.7s;
+  /*transition: all ease-in 0.7s; */
 }
