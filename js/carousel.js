@@ -1,6 +1,6 @@
 const [increment, decrement, changeSlides] = carouselState();
 
-fetch("http://jarleblog.local//wp-json/wp/v2/posts/?_embed").then((res) =>
+fetch("https://jarleblog.local//wp-json/wp/v2/posts/?_embed").then((res) =>
   res.json().then((data) => {
     console.log(data);
     const parsedPosts = processResponse(data);
