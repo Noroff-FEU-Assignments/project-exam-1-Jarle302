@@ -14,6 +14,8 @@ section {
   width: 90vw;
   display: none;
   border-radius: 22px;
+  text-decoration: none;
+  color: black;
 }
 
 .slides--container--textbox {
@@ -22,7 +24,6 @@ section {
 }
 
 p {
-  text-shadow: 1px 1px 1px white;
   color: black;
 }
 
