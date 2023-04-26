@@ -15,7 +15,9 @@ export function renderBlogPosts(
       ? `<div class="img--container"><img src="${imgURL}" alt=""></div>`
       : ""
   }
-   <div class="slides--container--textbox"><p class="carousel--date">${date}</p><p class="slides__tag--featured">Latest</p><h2 class="slides__h2">${title}</h2> <p class="slides__p--breadtext">${text}</p></div>
+   <div class="slides--container--textbox"><p class="carousel--date">${date}</p><p class="slides__tag--featured">${
+    isBackgroundImg ? "Latest" : ""
+  }</p><h2 class="slides__h2">${title}</h2> <p class="slides__p--breadtext">${text}</p></div>
     </a> `;
 }
 
@@ -27,7 +29,7 @@ export function processResponse(arr) {
     //regex gotten from chatGPT
     newObject.id = element.id;
     newObject.text = element.excerpt.rendered.replace(/(<p>|<\/p>|\n)/g, "");
-    newObject.date = element.date;
+    newObject.date = element.date.split("T")[0];
     newObject.edited = element.modified;
     newObject.imgURL = element._embedded["wp:featuredmedia"]
       ? element._embedded["wp:featuredmedia"][0].media_details.sizes.full
