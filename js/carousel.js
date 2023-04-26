@@ -1,6 +1,9 @@
 const [increment, decrement, changeSlides] = carouselState();
-
-fetch("https://jarleblogg.no/wp-json/wp/v2/posts/?_embed").then((res) =>
+import { username, password } from "./imports.js";
+fetch("https://jarleblogg.no/wp-json/wp/v2/posts/?_embed", {
+  method: "GET",
+  headers: { Authorization: "Basic " + btoa(`${username}:${password}`) },
+}).then((res) =>
   res.json().then((data) => {
     console.log(data);
     const parsedPosts = processResponse(data);
@@ -22,7 +25,7 @@ function renderCarouselSlides({ title, text, imgURL, date, modified }) {
   document.querySelector(".slides--container").innerHTML += `
  <div class="slides" style="background-image:url(${imgURL}); background-size:cover;">
 
- <div class="slides--container--textbox"><p class="slides__tag--featured">Latest</p><h2 class="slides__h2">${title}</h2> <p class="slides__p--breadtext">${text}</p></div>
+ <div class="slides--container--textbox"><p class="carousel--date">${date}</p><p class="slides__tag--featured">Latest</p><h2 class="slides__h2">${title}</h2> <p class="slides__p--breadtext">${text}</p></div>
    `;
 }
 

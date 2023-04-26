@@ -46,3 +46,7 @@ button {
   opacity: 1;
   /*transition: all ease-in 0.7s; */
 }
+
+.carousel--date {
+  font-size: 0.6rem;
+}
