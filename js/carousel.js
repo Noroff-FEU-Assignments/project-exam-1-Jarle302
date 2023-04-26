@@ -66,6 +66,7 @@ function processResponse(arr) {
     const newObject = {};
     newObject.title = element.title.rendered;
     //regex gotten from chatGPT
+    newObject.id = element.id;
     newObject.text = element.excerpt.rendered.replace(/(<p>|<\/p>|\n)/g, "");
     newObject.date = element.date;
     newObject.edited = element.modified;
