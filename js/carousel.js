@@ -21,12 +21,12 @@ fetch("https://jarleblogg.no/wp-json/wp/v2/posts/?_embed", {
   })
 );
 
-function renderCarouselSlides({ title, text, imgURL, date, modified }) {
+function renderCarouselSlides({ title, text, imgURL, date, modified, id }) {
   document.querySelector(".slides--container").innerHTML += `
- <div class="slides" style="background-image:url(${imgURL}); background-size:cover;">
+ <a href="/html/blogDetails.html?id=${id}" class="slides" style="background-image:url(${imgURL}); background-size:cover;">
 
  <div class="slides--container--textbox"><p class="carousel--date">${date}</p><p class="slides__tag--featured">Latest</p><h2 class="slides__h2">${title}</h2> <p class="slides__p--breadtext">${text}</p></div>
-   `;
+  </a> `;
 }
 
 function carouselState() {

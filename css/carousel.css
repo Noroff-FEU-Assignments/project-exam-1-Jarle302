@@ -12,7 +12,7 @@ section {
   z-index: 0;
   height: 85vh;
   width: 90vw;
-  opacity: 0;
+  display: none;
   border-radius: 22px;
 }
 
@@ -43,7 +43,7 @@ button {
 }
 
 .active {
-  opacity: 1;
+  display: block;
   /*transition: all ease-in 0.7s; */
 }
 
