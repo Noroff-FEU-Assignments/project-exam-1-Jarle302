@@ -1,10 +1,20 @@
 export const username = "jarlehtollaksen2@live.no";
 export const password = `5PWI pcln 2hoE 1Tid H0Nn UfOl`;
-
-export function renderBlogPosts({ title, text, imgURL, date, modified, id }) {
-  document.querySelector(".slides--container").innerHTML += `
-   <a href="/html/blogDetails.html?id=${id}" class="slides" style="background-image:url(${imgURL}); background-size:cover;">
-  
+export const baseURL = "https://jarleblogg.no/wp-json/wp/v2/posts/";
+export function renderBlogPosts(
+  { title, text, imgURL, date, modified, id },
+  domEl,
+  isBackgroundImg = false
+) {
+  domEl.innerHTML += `
+   <a href="/html/blogDetails.html?id=${id}" class="slides" style="background-image:url( ${
+    isBackgroundImg ? imgURL : ""
+  }); background-size:cover;">
+  ${
+    !isBackgroundImg
+      ? `<div class="img--container"><img src="${imgURL}" alt=""></div>`
+      : ""
+  }
    <div class="slides--container--textbox"><p class="carousel--date">${date}</p><p class="slides__tag--featured">Latest</p><h2 class="slides__h2">${title}</h2> <p class="slides__p--breadtext">${text}</p></div>
     </a> `;
 }

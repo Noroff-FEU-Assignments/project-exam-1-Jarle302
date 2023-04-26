@@ -1,18 +1,25 @@
 const [increment, decrement, changeSlides] = carouselState();
 import {
+  baseURL,
   username,
   password,
   renderBlogPosts,
   processResponse,
 } from "./imports.js";
-fetch("https://jarleblogg.no/wp-json/wp/v2/posts/?_embed", {
+fetch(`${baseURL}?_embed`, {
   method: "GET",
   headers: { Authorization: "Basic " + btoa(`${username}:${password}`) },
 }).then((res) =>
   res.json().then((data) => {
     console.log(data);
     const parsedPosts = processResponse(data);
-    parsedPosts.forEach((element) => renderBlogPosts(element));
+    parsedPosts.forEach((element) =>
+      renderBlogPosts(
+        element,
+        document.querySelector(".slides--container"),
+        true
+      )
+    );
     console.log(parsedPosts);
     const slidesArray = document.querySelectorAll(".slides");
     console.log(slidesArray);
