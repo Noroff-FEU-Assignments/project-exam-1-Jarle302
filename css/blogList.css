@@ -24,7 +24,7 @@
 }
 
 .slides__p--breadtext {
-  height: calc(3 * 1rem);
+  height: calc(2 * 1rem);
   overflow: hidden;
   font-size: 0.8rem;
 }
