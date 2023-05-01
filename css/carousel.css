@@ -1,7 +1,3 @@
-body {
-  background: antiquewhite;
-}
-
 section {
   display: flex;
   justify-content: center;
@@ -10,21 +6,16 @@ section {
 .slides {
   position: absolute;
   z-index: 0;
-  height: 85vh;
+  height: 51vh;
   width: 90vw;
   display: none;
   border-radius: 22px;
   text-decoration: none;
-  color: black;
 }
 
 .slides--container--textbox {
   position: relative;
   top: 286px;
-}
-
-p {
-  color: black;
 }
 
 button {
@@ -35,11 +26,11 @@ button {
   font-size: 2rem;
 }
 #forward--button {
-  top: 50%;
+  top: 60%;
   right: 5%;
 }
 #backward--button {
-  top: 50%;
+  top: 60%;
   left: 5%;
 }
 
