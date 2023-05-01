@@ -12,17 +12,24 @@
 
 .slides--container--textbox {
   flex: 1;
+  max-height: 70px;
+  overflow: hidden;
 }
 .slides {
   padding: 21px;
   width: 200;
   height: 266px;
-  border: 1px solid black;
+  border: 1px solid #5dffef;
   width: 200px;
   display: flex;
   flex-direction: column;
+  background: #465152;
+  border-radius: 21px;
 }
 
+.slides img {
+  border-radius: 21px;
+}
 .slides__p--breadtext {
   height: calc(2 * 1rem);
   overflow: hidden;

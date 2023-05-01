@@ -9,7 +9,7 @@ export function renderBlogPosts(
   domEl.innerHTML += `
    <a href="/html/blogDetails.html?id=${id}" class="slides" style="background-image:url( ${
     isBackgroundImg ? imgURL : ""
-  }); background-size:cover;">
+  }); background-position: center; background-size:cover;">
   ${
     !isBackgroundImg
       ? `<div class="img--container"><img src="${imgURL}" alt=""></div>`

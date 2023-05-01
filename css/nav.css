@@ -9,10 +9,10 @@ header {
 }
 
 .logo-image {
-  height: auto;
   width: 80px;
-  border-radius: 29px;
+  border-radius: 21px;
   height: 86px;
+  border: 2px solid #5dffef;
 }
 
 .nav__ul__li__a {
