@@ -3,6 +3,10 @@
   flex-direction: column;
 }
 
+body {
+  background-color: white;
+}
+
 input[type="text"] {
   border: none;
   border-bottom: 1px solid #5dffef;

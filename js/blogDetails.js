@@ -10,13 +10,20 @@ fetch(`${baseURL}${blogID}`, {
   res.json().then((data) => {
     document.querySelector(".blog__div--container").innerHTML =
       data.content.rendered;
-    document.querySelectorAll("img").forEach((img) =>
-      img.addEventListener("click", () => {
+    document.querySelectorAll("img").forEach((img) => {
+      img.addEventListener("click", (e) => {
+        e.stopPropagation();
         console.log({ img });
         document.querySelector(".img-modal").style.display = "block";
         document.querySelector(".img-modal__img").src = img.src;
-      })
-    );
+      });
+      //gotten from chat-gpt
+      document.addEventListener("click", (e) => {
+        if (!document.querySelector(".img-modal").contains(e.target)) {
+          document.querySelector(".img-modal").style.display = "none";
+        }
+      });
+    });
   })
 );
 

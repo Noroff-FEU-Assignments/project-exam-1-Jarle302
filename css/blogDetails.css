@@ -6,9 +6,9 @@ main {
 .img-modal {
   display: none;
   position: fixed;
-  width: 70%;
-  height: 70%;
-  border: solid 1px black;
+  width: 97%;
+  height: 76%;
+  backdrop-filter: blur(2px);
 }
 
 img {
@@ -19,7 +19,6 @@ img {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  background: azure;
 }
 
 .img-modal__button--exit {
