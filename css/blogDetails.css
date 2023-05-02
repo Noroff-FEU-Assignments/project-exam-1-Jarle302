@@ -9,6 +9,7 @@ main {
   height: 76%;
   backdrop-filter: blur(2px);
   width: fit-content;
+  height: fit-content;
 }
 
 img {
