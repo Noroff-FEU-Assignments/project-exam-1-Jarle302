@@ -6,9 +6,9 @@ main {
 .img-modal {
   display: none;
   position: fixed;
-  width: 97%;
   height: 76%;
   backdrop-filter: blur(2px);
+  width: fit-content;
 }
 
 img {
