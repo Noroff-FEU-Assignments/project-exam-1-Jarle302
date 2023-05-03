@@ -6,3 +6,7 @@
 .headers-index h2 {
   font-size: 1rem;
 }
+
+p {
+  max-width: none;
+}

@@ -9,7 +9,6 @@ main {
   height: 76%;
   backdrop-filter: blur(2px);
   width: fit-content;
-  height: fit-content;
 }
 
 img {
@@ -25,4 +24,10 @@ img {
 .img-modal__button--exit {
   position: absolute;
   right: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .img-modal {
+    height: fit-content;
+  }
 }
