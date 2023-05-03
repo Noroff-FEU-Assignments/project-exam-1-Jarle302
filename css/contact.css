@@ -3,22 +3,24 @@
   flex-direction: column;
 }
 
-body {
-  background-color: white;
-}
-
 input[type="text"] {
   border: none;
-  border-bottom: 1px solid #5dffef;
+  border-bottom: 1px solid #f29727;
   outline: none;
-  background: #3f5959;
-  max-width: 400px;
+  background: #ffffff;
+  max-width: 309px;
+  margin-bottom: 20px;
+}
+
+textarea {
+  border: 1px solid #f5b373;
 }
 
 main {
   display: flex;
   justify-content: center;
   gap: 10px;
+  background-color: #3f5959;
 }
 
 main * {
@@ -27,9 +29,9 @@ main * {
 }
 
 section {
-  border: 3px solid #5dffef;
   border-radius: 23px;
   padding: 29px;
+  background-color: white;
 }
 
 section,
