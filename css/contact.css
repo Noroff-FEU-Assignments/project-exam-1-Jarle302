@@ -9,11 +9,11 @@ input[type="text"] {
   outline: none;
   background: #ffffff;
   max-width: 309px;
-  margin-bottom: 20px;
 }
 
 textarea {
   border: 1px solid #f5b373;
+  max-width: 309px;
 }
 
 main {
@@ -23,18 +23,18 @@ main {
   background-color: #3f5959;
 }
 
-main * {
-  flex: 1;
-  max-width: 400px;
-}
-
 section {
   border-radius: 23px;
   padding: 29px;
   background-color: white;
+  width: 266px;
 }
 
 section,
 h1 {
   margin: 0;
+}
+
+h2 {
+  font-size: 1rem;
 }

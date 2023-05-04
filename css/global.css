@@ -13,6 +13,18 @@ h2 {
   font-weight: 400;
 }
 
+/*forms */
+
+.success-message {
+  margin: 0;
+  color: #006400;
+}
+
+.error {
+  color: #b40505;
+  margin-bottom: 20px;
+}
+
 img {
   width: 100%;
   height: auto;
