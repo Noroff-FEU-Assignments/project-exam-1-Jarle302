@@ -32,3 +32,8 @@ document
   .addEventListener("click", () => {
     document.querySelector(".img-modal").style.display = "none";
   });
+
+/*
+  function postComment({content,author_name,post}){
+    fetch("https://jarleblogg.no/wp-json/wp/v2/comments",{method:"POST",headers{ "Content-Type":"application/json"}, body:{content,}})
+  }*/

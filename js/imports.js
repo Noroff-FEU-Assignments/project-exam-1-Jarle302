@@ -41,6 +41,7 @@ export function processResponse(arr) {
   return newArr;
 }
 
+//I made this function for interaction design CA and reused it here.
 export function validateInput(
   callback,
   domEl,

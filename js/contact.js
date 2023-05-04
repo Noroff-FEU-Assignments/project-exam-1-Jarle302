@@ -6,6 +6,7 @@ validateInput(
   "Name must be atleast 6 characters"
 );
 
+//regen gotten from chatGPT
 validateInput(
   (value) => /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(value),
   document.querySelector("#input--email"),
