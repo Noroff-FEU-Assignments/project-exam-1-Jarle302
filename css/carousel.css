@@ -15,8 +15,8 @@ section {
 
 .slides--container--textbox {
   overflow: hidden;
-  background-color: #000000cf;
-  border-radius: 22px;
+  background-color: #465152;
+  border-radius: 0 22px 22px 22px;
   align-self: flex-end;
 }
 

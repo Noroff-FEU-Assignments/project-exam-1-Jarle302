@@ -19,11 +19,31 @@
   <body>
     <header></header>
     <main>
-      <div tabindex="-1" class="img-modal">
+      <div class="img-modal">
         <button class="img-modal__button--exit">X</button>
-        <img tabindex="-1" class="img-modal__img" src="" alt="" />
+        <img class="img-modal__img" src="" alt="" />
       </div>
       <section class="blog__div--container"></section>
+      <section>
+        <h2>Leave a comment!</h2>
+        <form>
+          <label for="username--comments">Username</label>
+          <input
+            name="username--comments"
+            id="username--comments"
+            type="text" />
+          <label for="message--comments">Message</label>
+          <textarea
+            name="message--comments"
+            id="message--comments"
+            cols="30"
+            rows="10"></textarea>
+          <button class="button--post-comment">Post Comment</button>
+        </form>
+      </section>
+      <section class="comments--container">
+        <h2>Comments</h2>
+      </section>
     </main>
     <footer></footer>
   </body>

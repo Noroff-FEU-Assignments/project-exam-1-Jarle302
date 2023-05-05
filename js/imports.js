@@ -55,3 +55,18 @@ export function validateInput(
     errorDiv.innerHTML = callback(domEl.value) ? succMessage : errMessage;
   });
 }
+
+//first domel = content, second = author, third subject will get the same prop name as the input name
+export function postComment(postID, ...domElements) {
+  const content = domElements[0].value;
+  const author_name = domElements[1].value;
+  const post = postID;
+
+  fetch("https://jarleblogg.no/wp-json/wp/v2/comments", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ content, author_name, post }),
+  })
+    .then((res) => res.json())
+    .then((data) => console.log(data));
+}

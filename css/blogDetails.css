@@ -1,6 +1,11 @@
 main {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+section {
+  padding: 20px;
 }
 
 .img-modal {
@@ -30,4 +35,45 @@ img {
   .img-modal {
     height: fit-content;
   }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.comments--container {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+}
+
+.comments--avatar {
+  width: 45px;
+  border-radius: 50px;
+  transform: translate(4px, 16px);
+}
+
+.blog--comment {
+  background: #465152;
+  border: 1px solid #5dffef;
+  border-radius: 21px;
+}
+
+label {
+  color: #f29727;
+}
+
+.comments--date {
+  font-size: 0.7rem;
+  color: white;
+}
+
+.button--post-comment {
+  background: #465152;
+  border-radius: 7px;
+  padding: 15px;
+  max-width: max-content;
+  color: #f29727;
+  box-shadow: 2px 3px 4px black;
 }
