@@ -1,6 +1,10 @@
 .headers-index {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+}
+
+.index__hero--image {
+  max-width: 400px;
 }
 
 .index__h2--latest {
