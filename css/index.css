@@ -3,8 +3,8 @@
   justify-content: center;
 }
 
-.headers-index h2 {
-  font-size: 1rem;
+.index__h2--latest {
+  font-size: 1.5rem;
 }
 
 p {
