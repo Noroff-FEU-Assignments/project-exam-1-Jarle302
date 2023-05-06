@@ -50,5 +50,10 @@ button {
 }
 
 .img--container {
-  height: 337px;
+  max-height: 337px;
+  background: #f29727;
+}
+
+h2 {
+  font-size: 1rem;
 }
