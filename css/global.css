@@ -49,8 +49,10 @@ p {
 /*BUTTONS*/
 .btn {
   padding: 10px 20px;
-  background: #6cf5e7;
+  background: rgb(108, 245, 231);
   border-radius: 12px;
+  display: block;
+  width: 87px;
 }
 
 .btn--alternate {

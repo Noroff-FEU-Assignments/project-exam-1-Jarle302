@@ -29,12 +29,12 @@ button {
   font-size: 2rem;
 }
 #forward--button {
-  top: 60%;
-  right: 7%;
+  right: 35%;
+  bottom: 20%;
 }
 #backward--button {
-  top: 60%;
-  left: 7%;
+  left: 35%;
+  bottom: 20%;
 }
 
 .active {

@@ -17,7 +17,31 @@
   </head>
   <body>
     <header></header>
-    <main></main>
+    <main>
+      <h1>About</h1>
+      <section>
+        <h2>Purpose</h2>
+        <p>
+          This blog is made as my exam project first year studying front end
+          development at noroff. I could make a blog about anything, i decided
+          to create a automatic blog, so i first made a backend app that creates
+          blog posts and makes images that fits the content without having to be
+          manually prompted.
+        </p>
+      </section>
+      <section>
+        <h2>How it works</h2>
+        <p>
+          The blog is generating the posts using openAis api, where it gets
+          prompted to create a blog post, then parts of the posts are
+          dynamically used to create images that fits the text again using open
+          Ais api, which then posts the post to wordpress which is used as a
+          headless cms, in the end the front end is fetching the posts from the
+          wordpress api and displaying them as a blog. The backend is set on a
+          timer, to create a new post every day
+        </p>
+      </section>
+    </main>
     <footer></footer>
   </body>
 </html>
