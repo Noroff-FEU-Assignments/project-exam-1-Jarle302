@@ -52,6 +52,12 @@ button {
 .img--container {
   max-height: 337px;
   background: #f29727;
+  overflow: hidden;
+}
+
+.img--container,
+.img--container img {
+  border-radius: 21px 21px 0 0;
 }
 
 h2 {
