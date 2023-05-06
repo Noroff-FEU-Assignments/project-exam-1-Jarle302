@@ -17,7 +17,7 @@ fetch(`${baseURL}?_embed`, {
       renderBlogPosts(
         element,
         document.querySelector(".slides--container"),
-        true
+        false
       )
     );
     console.log(parsedPosts);

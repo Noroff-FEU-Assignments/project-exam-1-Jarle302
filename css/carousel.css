@@ -6,8 +6,7 @@ section {
 .slides {
   position: absolute;
   z-index: 0;
-  height: 65vh;
-  max-width: 52vw;
+  max-width: 400px;
   display: none;
   border-radius: 22px;
   text-decoration: none;
@@ -16,13 +15,12 @@ section {
 .slides--container--textbox {
   overflow: hidden;
   background-color: #465152;
-  border-radius: 0 22px 22px 22px;
-  align-self: flex-end;
+  border-radius: 0 0 22px 22px;
+  max-height: 177px;
 }
 
 .slides__p--breadtext {
-  max-height: calc(2 * 1.2rem);
-  overflow: hidden;
+  display: none;
 }
 
 button {
@@ -43,9 +41,14 @@ button {
 
 .active {
   display: flex;
-  align-items: end;
+  flex-direction: column;
 }
 
 .carousel--date {
+  margin-top: 0;
   font-size: 0.6rem;
+}
+
+.img--container {
+  height: 337px;
 }
