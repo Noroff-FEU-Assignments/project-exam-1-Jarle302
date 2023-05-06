@@ -4,8 +4,6 @@ section {
 }
 
 .slides {
-  position: absolute;
-  z-index: 0;
   max-width: 400px;
   display: none;
   border-radius: 22px;
