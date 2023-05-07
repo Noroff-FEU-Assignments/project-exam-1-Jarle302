@@ -22,19 +22,9 @@ section {
 }
 
 button {
-  position: absolute;
-  z-index: 2;
   border: none;
   background: #00000045;
   font-size: 2rem;
-}
-#forward--button {
-  right: 35%;
-  bottom: 20%;
-}
-#backward--button {
-  left: 35%;
-  bottom: 20%;
 }
 
 .active {
