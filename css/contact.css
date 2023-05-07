@@ -20,14 +20,19 @@ main {
   display: flex;
   justify-content: center;
   gap: 10px;
+  align-items: center;
   background-color: #3f5959;
 }
 
-section {
+form {
   border-radius: 23px;
-  padding: 29px;
   background-color: white;
   width: 266px;
+  padding: 29px;
+}
+
+.headers--container {
+  padding: 0 29px;
 }
 
 section,

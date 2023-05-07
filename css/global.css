@@ -6,6 +6,13 @@ body {
   font-family: "Montserrat", sans-serif;
   background-color: #3f5959;
 }
+
+label,
+input,
+button {
+  font-family: "Montserrat", sans-serif;
+}
+
 h1,
 h2,
 h3 {

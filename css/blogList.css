@@ -52,3 +52,7 @@ p {
 .carousel--date {
   font-size: 0.7rem;
 }
+
+.blog-list__button--view-more {
+  margin: 20px auto;
+}
