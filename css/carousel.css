@@ -13,7 +13,6 @@ section {
 .slides--container--textbox {
   overflow: hidden;
   background-color: #465152;
-  border-radius: 0 0 22px 22px;
   max-height: 177px;
 }
 
@@ -41,11 +40,6 @@ button {
   max-height: 337px;
   background: #f29727;
   overflow: hidden;
-}
-
-.img--container,
-.img--container img {
-  border-radius: 21px 21px 0 0;
 }
 
 h2 {

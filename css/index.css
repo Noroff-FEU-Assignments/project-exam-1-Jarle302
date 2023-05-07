@@ -24,8 +24,11 @@ p {
 
 .carousel--container {
   display: flex;
-  flex-wrap: wrap;
   justify-content: start;
+}
+
+.index__section--updates {
+  display: block;
 }
 
 section {
@@ -35,6 +38,14 @@ section {
 .button--container {
   display: flex;
   gap: 10px;
+}
+
+#backward--button {
+  border-radius: 21px 0 0 21px;
+}
+
+#forward--button {
+  border-radius: 0 21px 21px 0;
 }
 
 @media screen and (max-width: 700px) {
