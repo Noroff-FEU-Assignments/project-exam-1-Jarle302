@@ -1,0 +1,19 @@
+.about__img {
+  max-width: 400px;
+}
+
+section {
+  display: flex;
+  padding: 20px;
+}
+
+h1 {
+  padding: 20px;
+  text-align: center;
+}
+
+@media screen and (max-width: 850px) {
+  section {
+    flex-direction: column;
+  }
+}
