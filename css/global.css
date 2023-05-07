@@ -66,3 +66,20 @@ p {
   background-color: #3f5959;
   border: 1px #6cf5e7 solid;
 }
+
+/*Spinner animation made by chatGPT*/
+
+.spinner {
+  animation: spinner 2s linear infinite;
+  object-fit: contain;
+  width: 70px;
+}
+
+@keyframes spinner {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
