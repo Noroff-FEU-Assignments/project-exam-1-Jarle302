@@ -7,6 +7,12 @@ body {
   background-color: #3f5959;
 }
 
+.wrapper {
+  padding: 40px;
+  max-width: 1350px;
+  margin: auto;
+}
+
 label,
 input,
 button {
