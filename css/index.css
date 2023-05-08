@@ -27,15 +27,6 @@ p {
   justify-content: start;
 }
 
-.index__section--updates {
-  display: block;
-  flex-basis: 100%;
-}
-
-section {
-  padding: 20px;
-}
-
 .button--container {
   display: flex;
   gap: 10px;
@@ -79,16 +70,33 @@ section {
 .testimonials {
   display: block;
 }
-.flex-wrapper {
-  display: flex;
+
+.grid--wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  grid-template-rows: 1fr 1fr;
+  padding: 40px;
+  gap: 20px;
+}
+.div--hero {
+  grid-column: 1/3;
 }
 
-@media screen and (max-width: 700px) {
-  .headers-index {
-    flex-direction: column;
-  }
+.index__hero--image {
+  grid-column: 3/5;
+}
 
-  .flex-wrapper {
-    flex-direction: column;
-  }
+.index__section--updates {
+  display: block;
+  grid-column: 1/3;
+}
+
+.testimonials {
+  grid-column: 3/5;
+  max-width: 400px;
+}
+
+@media screen and (max-width: 833px) {
 }
