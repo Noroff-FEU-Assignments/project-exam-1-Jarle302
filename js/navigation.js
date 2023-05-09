@@ -1,6 +1,6 @@
 function renderNavigation() {
   document.querySelector("header").innerHTML = `<nav>
-  <a href="/index.html"> <img class="logo-image" src="/assets/logoimage.png" alt="" /> </a>
+  <a href="/index.html"> <img class="logo-image" src="/assets/logo.png" alt="" /> </a>
 
     <ul class="nav__ul">
         <li class="nav_ul_li"><a class="nav__ul__li__a" href="/index.html">Home</a></li>
