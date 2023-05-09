@@ -25,3 +25,9 @@ nav {
   display: flex;
   justify-content: space-between;
 }
+
+.active {
+  color: #000000;
+  background-color: #f29727;
+  box-shadow: 1px 1px 3px black;
+}

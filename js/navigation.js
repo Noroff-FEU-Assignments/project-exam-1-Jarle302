@@ -12,3 +12,11 @@ function renderNavigation() {
 }
 
 renderNavigation();
+
+document
+  .querySelectorAll(".nav__ul__li__a")
+  .forEach((element) => isActive(element) && element.classList.add("active"));
+
+function isActive(element) {
+  return element.href === window.location.href ? true : false;
+}
