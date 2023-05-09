@@ -10,6 +10,7 @@ body {
 header,
 footer {
   background: #465152;
+  border: 2px solid #4eaba3;
 }
 
 footer {
@@ -31,7 +32,7 @@ button {
 h1,
 h2,
 h3 {
-  color: #f29727;
+  color: #6cf5e7;
   font-family: "Montserrat Alternates", sans-serif;
   font-weight: 400;
 }
@@ -71,7 +72,7 @@ p {
 /*BUTTONS*/
 .btn {
   padding: 10px 20px;
-  background: rgb(108, 245, 231);
+  background: #f29727;
   border-radius: 12px;
   display: block;
   width: 87px;
@@ -79,7 +80,7 @@ p {
 
 .btn--alternate {
   background-color: #3f5959;
-  border: 1px #6cf5e7 solid;
+  border: 2px#f29727 solid;
 }
 
 /*Spinner animation made by chatGPT*/
