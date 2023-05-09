@@ -8,6 +8,7 @@ fetch(`${baseURL}${blogID}`, {
   headers: { Authorization: "Basic " + btoa(`${username}:${password}`) },
 }).then((res) =>
   res.json().then((data) => {
+    document.title = `The Synthetic Scribe ||${data.title.rendered}`;
     document.querySelector(".blog__div--container").innerHTML =
       data.content.rendered;
     document.querySelectorAll("img").forEach((img) => {
