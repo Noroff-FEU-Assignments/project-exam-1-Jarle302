@@ -13,7 +13,7 @@ header {
   width: 80px;
   border-radius: 21px;
   height: 86px;
-  border: 2px solid #5dffef;
+  border: 2px solid var(--secondary-color);
 }
 
 .nav__ul__li__a {
@@ -28,6 +28,6 @@ nav {
 
 .active {
   color: #000000;
-  background-color: #f29727;
+  background-color: var(--third-color);
   box-shadow: 1px 1px 3px black;
 }

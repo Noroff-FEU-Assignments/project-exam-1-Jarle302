@@ -18,11 +18,11 @@
 .slides {
   padding: 21px;
   height: 266px;
-  border: 1px solid #5dffef;
+  border: 1px solid var(--secondary-color);
   width: 200px;
   display: flex;
   flex-direction: column;
-  background: #465152;
+  background: var(--fourth-color);
   border-radius: 21px;
 }
 

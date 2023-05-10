@@ -56,13 +56,13 @@ form {
 
 .blog--comment {
   background: #465152;
-  border: 1px solid #5dffef;
+  border: 1px solid var(--secondary-color);
   border-radius: 21px;
   padding: 0 20px;
 }
 
 label {
-  color: #f29727;
+  color: var(--third-color);
 }
 
 .comments--date {
@@ -71,10 +71,10 @@ label {
 }
 
 .button--post-comment {
-  background: #465152;
+  background: var(--primary-color);
   border-radius: 7px;
   padding: 15px;
   max-width: max-content;
-  color: #f29727;
+  color: var(--third-color);
   box-shadow: 2px 3px 4px black;
 }

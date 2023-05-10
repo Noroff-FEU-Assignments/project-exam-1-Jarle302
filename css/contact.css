@@ -5,14 +5,14 @@
 
 input[type="text"] {
   border: none;
-  border-bottom: 1px solid #f29727;
+  border-bottom: 1px solid var(--third-color);
   outline: none;
   background: #ffffff;
   max-width: 309px;
 }
 
 textarea {
-  border: 1px solid #f5b373;
+  border: 1px solid var(--third-color);
   max-width: 309px;
 }
 
@@ -21,7 +21,7 @@ main {
   justify-content: center;
   gap: 10px;
   align-items: center;
-  background-color: #3f5959;
+  background-color: var(--primary-color);
 }
 
 form {

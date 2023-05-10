@@ -6,7 +6,7 @@
 .index__hero--image {
   max-width: 400px;
   border-radius: 21px;
-  border: 3px solid #f29727;
+  border: 3px solid var(--third-color);
 }
 
 .index__h2--latest {
@@ -55,8 +55,8 @@ p {
 }
 
 .blog--comment {
-  background: #465152;
-  border: 1px solid #5dffef;
+  background: var(--fourth-color);
+  border: 1px solid var(--secondary-color);
   border-radius: 21px;
   padding: 0 20px;
   max-width: 400px;

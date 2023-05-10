@@ -12,7 +12,7 @@ section {
 
 .slides--container--textbox {
   overflow: hidden;
-  background-color: #465152;
+  background-color: var(--fourth-color);
   max-height: 177px;
 }
 
@@ -38,7 +38,7 @@ button {
 
 .img--container {
   max-height: 337px;
-  background: #f29727;
+  background: var(--third-color);
   overflow: hidden;
 }
 
