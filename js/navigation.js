@@ -21,9 +21,9 @@ function isActive(element) {
   console.log(window.location.href);
 
   return element.href ===
-    window.location.href
-      .split("https://reliable-kashata-528c36.netlify.app/")[0]
-      .split("?")[0]
+    window.location.href.split(
+      "https://reliable-kashata-528c36.netlify.app/"
+    )[0]
     ? true
     : false;
 }
