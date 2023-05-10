@@ -10,7 +10,7 @@ body {
 header,
 footer {
   background: #465152;
-  border: 2px solid #4eaba3;
+  border-bottom: 2px solid #4eaba3;
 }
 
 footer {
