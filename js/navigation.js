@@ -18,5 +18,10 @@ document
   .forEach((element) => isActive(element) && element.classList.add("active"));
 
 function isActive(element) {
-  return element.href.split("?")[0] === window.location.href ? true : false;
+  console.log(window.location.href);
+  if (
+    window.location.href ===
+    "https://reliable-kashata-528c36.netlify.app/index.html?fbclid=IwAR2EjC3LsaS-0tNUGU0ePLmCrcArbGafMxSesHHc4kOWasJTj5wCvihM0YE"
+  )
+    return element.href.split("?")[0] === window.location.href ? true : false;
 }
