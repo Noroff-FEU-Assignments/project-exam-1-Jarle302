@@ -20,5 +20,7 @@ document
 function isActive(element) {
   console.log(console.log(element.href));
 
-  return element.href === window.location.href.split("/")[3] ? true : false;
+  return element.href.split("/")[4] === window.location.href.split("/")[3]
+    ? true
+    : false;
 }
