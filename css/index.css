@@ -71,6 +71,10 @@ p {
   display: block;
 }
 
+.carousel--container {
+  min-height: 345px;
+}
+
 .grid--wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
