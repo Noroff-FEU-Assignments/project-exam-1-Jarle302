@@ -20,7 +20,8 @@ document
 function isActive(element) {
   return window.location.href.split("/")[
     window.location.href.split("/").length - 1
-  ] === element.href.split("/")[element.href.split("/").length - 1]
+  ] ===
+    element.href.split("/")[element.href.split("/").length - 1].split("?")[0]
     ? true
     : false;
 }
