@@ -19,6 +19,8 @@ header {
 .nav__ul__li__a {
   text-decoration: none;
   color: rgb(255, 255, 255);
+  transition: transform 700ms;
+  display: flex;
 }
 
 nav {
