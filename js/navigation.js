@@ -18,15 +18,14 @@ document
   .forEach((element) => isActive(element) && element.classList.add("active"));
 
 function isActive(element) {
-  console.log(
-    element.href.split("/")[element.href.split("/").length - 1].split(".")[0],
-    url
-  );
-
   const url =
     window.location.pathname.split("/").length === 1
       ? window.location.pathname.split("/")[1].split(".")[0]
       : window.location.pathname.split("/")[2].split(".")[0];
+  console.log(
+    element.href.split("/")[element.href.split("/").length - 1].split(".")[0],
+    url
+  );
   return url ===
     element.href.split("/")[element.href.split("/").length - 1].split(".")[0]
     ? true
