@@ -22,8 +22,8 @@ function isActive(element) {
     element.href.split("/")[element.href.split("/").length - 1],
     window.location.pathname
   );
-  return window.location.pathname ===
-    element.href.split("/")[element.href.split("/").length - 1]
+  return window.location.pathname.split("/")[1] ===
+    element.href.split("/")[element.href.split("/").length - 1].split(".")[1]
     ? true
     : false;
 }
