@@ -18,10 +18,5 @@ document
   .forEach((element) => isActive(element) && element.classList.add("active"));
 
 function isActive(element) {
-  return window.location.href.split("/")[
-    window.location.href.split("/").length - 1
-  ] ===
-    element.href.split("?")[0].split("/")[element.href.split("/").length - 1]
-    ? true
-    : false;
+  return window.location.pathname === element.href ? true : false;
 }
