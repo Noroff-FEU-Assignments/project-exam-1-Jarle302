@@ -18,7 +18,7 @@ document
   .forEach((element) => isActive(element) && element.classList.add("active"));
 
 function isActive(element) {
-  return window.location.href.split("/").includes(element.href.split("/")[4])
+  return element.split("/").includes(window.location.href.split("/")[4])
     ? true
     : false;
 }
