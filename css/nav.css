@@ -30,6 +30,6 @@ nav {
 
 .active {
   color: #000000;
-  background-color: var(--third-color);
+  background-color: #f29727;
   box-shadow: 1px 1px 3px black;
 }

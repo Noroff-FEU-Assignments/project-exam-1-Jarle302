@@ -18,12 +18,12 @@
 .slides {
   padding: 21px;
   height: 266px;
-  border: 1px solid var(--secondary-color);
   width: 200px;
   display: flex;
   flex-direction: column;
   background: var(--fourth-color);
   border-radius: 21px;
+  box-shadow: 4px 3px black;
 }
 
 .slides img {
