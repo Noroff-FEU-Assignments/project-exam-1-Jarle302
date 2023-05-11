@@ -18,7 +18,10 @@ document
   .forEach((element) => isActive(element) && element.classList.add("active"));
 
 function isActive(element) {
-  console.log(element.href, window.location.pathname);
+  console.log(
+    element.href.split("/")[element.href.split("/").length - 1],
+    window.location.pathname
+  );
   return window.location.pathname ===
     element.href.split("/")[element.href.split("/").length - 1]
     ? true
