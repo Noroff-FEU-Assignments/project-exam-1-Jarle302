@@ -19,10 +19,10 @@ document
 
 function isActive(element) {
   console.log(
-    element.href.split("/")[element.href.split("/").length - 1],
+    element.href.split("/")[element.href.split("/").length - 1].split(".")[0],
     window.location.pathname.split("/")[0]
   );
-  return window.location.pathname.split("/")[1] ===
+  return window.location.pathname.split("/")[0] ===
     element.href.split("/")[element.href.split("/").length - 1].split(".")[0]
     ? true
     : false;
