@@ -19,5 +19,8 @@ document
 
 function isActive(element) {
   console.log(element.href, window.location.pathname);
-  return window.location.pathname === element.href ? true : false;
+  return window.location.pathname ===
+    element.href.split("/")[element.href.split("/").length - 1]
+    ? true
+    : false;
 }
