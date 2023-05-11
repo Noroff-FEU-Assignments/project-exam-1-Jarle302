@@ -21,7 +21,7 @@ function isActive(element) {
   return window.location.href.split("/")[
     window.location.href.split("/").length - 1
   ] ===
-    element.href.split("/")[element.href.split("/").length - 1].split("?")[0]
+    element.href.split("?")[0].split("/")[element.href.split("/").length - 1]
     ? true
     : false;
 }
