@@ -20,7 +20,7 @@ document
 function isActive(element) {
   console.log(
     element.href.split("/")[element.href.split("/").length - 1].split(".")[0],
-    "dance" + window.location.pathname.split("/")[1]
+    "dance" + window.location.pathname
   );
   return window.location.pathname.split("/")[1] ===
     element.href.split("/")[element.href.split("/").length - 1].split(".")[0]
