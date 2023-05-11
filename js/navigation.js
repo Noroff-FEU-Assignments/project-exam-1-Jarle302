@@ -23,6 +23,7 @@ function isActive(element) {
       ? window.location.pathname.split("/")[1].split(".")[0]
       : window.location.pathname.split("/")[2];
   console.log(
+    window.location.pathname.split("/").length,
     element.href.split("/")[element.href.split("/").length - 1].split(".")[0],
     url
   );
