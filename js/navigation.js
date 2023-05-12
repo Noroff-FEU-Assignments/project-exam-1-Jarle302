@@ -5,20 +5,17 @@ function renderNavigation(domEl, ...links) {
     <ul class="nav__ul">
     ${links
       .map(
-        (link) =>
-          `<li class="nav_ul_li"><a class="nav__ul__li__a" href="${link}/index.html">${links.includes(
-            "index"
+        (link, index) =>
+          `<li class="nav_ul_li"><a class="nav__ul__li__a" href="${link}">${
+            index === 0
               ? "home"
               : link.split(".")[0].split("/")[
                   link.split(".")[0].split("/").length - 1
                 ]
-          )}</a></li>`
+          }</a></li>`
       )
       .join("")}
-        <li class="nav_ul_li"><a class="nav__ul__li__a" href="/index.html">Home</a></li>
-        <li class="nav_ul_li"><a class="nav__ul__li__a" href="/html/bloglist.html">Blog</a></li>
-        <li class="nav_ul_li"><a class="nav__ul__li__a" href="/html/about.html">About</a></li>
-        <li class="nav_ul_li"><a class="nav__ul__li__a" href="/html/contact.html">Contact</a></li>
+        
     </ul>
     <button class="hamburger-menu__button">
     <i class="fa-solid fa-bars"></i></button>
