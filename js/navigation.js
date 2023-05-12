@@ -1,8 +1,20 @@
-function renderNavigation() {
-  document.querySelector("header").innerHTML = `<nav class="nav--main wrapper">
+function renderNavigation(domEl, ...links) {
+  document.querySelector(domEl).innerHTML = `<nav class="nav--main wrapper">
   <a href="/index.html"> <img class="logo-image" src="/assets/logo.png" alt="" /> </a>
 
     <ul class="nav__ul">
+    ${links
+      .map(
+        (link) =>
+          `<li class="nav_ul_li"><a class="nav__ul__li__a" href="${link}/index.html">${links.includes(
+            "index"
+              ? "home"
+              : link.split(".")[0].split("/")[
+                  link.split(".")[0].split("/").length - 1
+                ]
+          )}</a></li>`
+      )
+      .join("")}
         <li class="nav_ul_li"><a class="nav__ul__li__a" href="/index.html">Home</a></li>
         <li class="nav_ul_li"><a class="nav__ul__li__a" href="/html/bloglist.html">Blog</a></li>
         <li class="nav_ul_li"><a class="nav__ul__li__a" href="/html/about.html">About</a></li>
@@ -13,7 +25,13 @@ function renderNavigation() {
 </nav>`;
 }
 
-renderNavigation();
+renderNavigation(
+  "header",
+  "/index.html",
+  "/html/bloglist.html",
+  "/html/about.html",
+  "/html/contact.html"
+);
 
 document
   .querySelectorAll(".nav__ul__li__a")
