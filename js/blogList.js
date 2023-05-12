@@ -7,6 +7,7 @@ import {
 } from "./imports.js";
 
 const fetchBlog = fetchBlogposts();
+fetchBlog();
 
 document
   .querySelector(".blog-list__button--view-more")
