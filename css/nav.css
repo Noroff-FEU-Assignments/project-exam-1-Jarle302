@@ -57,6 +57,7 @@ nav {
     gap: 52px;
     border: 2px solid #68f2e7;
     border-radius: 21px;
+    z-index: 100;
   }
 
   .visible {
