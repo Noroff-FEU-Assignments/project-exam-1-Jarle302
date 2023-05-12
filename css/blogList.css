@@ -24,6 +24,12 @@
   background: var(--fourth-color);
   border-radius: 21px;
   box-shadow: 4px 3px black;
+  transition: transform 700ms;
+}
+
+.slides:hover {
+  transform: translateY(-2px);
+  transition: transform 200ms;
 }
 
 .slides img {
