@@ -1,6 +1,9 @@
 header {
   padding: 5px 1%;
 }
+.hamburger-menu__button {
+  display: none;
+}
 
 .nav__ul {
   list-style: none;
@@ -30,6 +33,32 @@ nav {
 
 .active {
   color: #000000;
-  background-color: #f29727;
+  background-color: var(--secondary-color);
   box-shadow: 1px 1px 3px black;
+}
+
+@media screen and (max-width: 600px) {
+  .hamburger-menu__button {
+    display: block;
+  }
+
+  .nav__ul {
+    display: none;
+    padding: 40px;
+    position: fixed;
+    background-color: var(--main-color);
+    width: 80%;
+    height: 29vh;
+    margin: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 52px;
+    border: 2px solid #68f2e7;
+    border-radius: 21px;
+  }
+
+  .visible {
+    display: flex;
+  }
 }

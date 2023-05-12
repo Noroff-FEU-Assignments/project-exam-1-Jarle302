@@ -19,6 +19,7 @@ header,
 footer {
   background: var(--fourth-color);
   border-bottom: 2px solid var(--header-footer-color);
+  min-height: 94px;
 }
 
 footer {

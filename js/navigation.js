@@ -1,5 +1,5 @@
 function renderNavigation() {
-  document.querySelector("header").innerHTML = `<nav class="wrapper">
+  document.querySelector("header").innerHTML = `<nav class="nav--main wrapper">
   <a href="/index.html"> <img class="logo-image" src="/assets/logo.png" alt="" /> </a>
 
     <ul class="nav__ul">
@@ -8,6 +8,8 @@ function renderNavigation() {
         <li class="nav_ul_li"><a class="nav__ul__li__a" href="/html/about.html">About</a></li>
         <li class="nav_ul_li"><a class="nav__ul__li__a" href="/html/contact.html">Contact</a></li>
     </ul>
+    <button class="hamburger-menu__button">
+    <i class="fa-solid fa-bars"></i></button>
 </nav>`;
 }
 
@@ -16,6 +18,13 @@ renderNavigation();
 document
   .querySelectorAll(".nav__ul__li__a")
   .forEach((element) => isActive(element) && element.classList.add("active"));
+
+document
+  .querySelector(".hamburger-menu__button")
+  .addEventListener("click", () => {
+    console.log("clicked");
+    document.querySelector(".nav__ul").classList.toggle("visible");
+  });
 
 function isActive(element) {
   const url =
