@@ -6,12 +6,13 @@ import {
   renderBlogPosts,
   processResponse,
 } from "./imports.js";
+
+document.querySelector(".spinner").style.display = "block";
 fetch(`${baseURL}?_embed`, {
   method: "GET",
   headers: { Authorization: "Basic " + btoa(`${username}:${password}`) },
 }).then((res) =>
   res.json().then((data) => {
-    console.log(data);
     const parsedPosts = processResponse(data);
     parsedPosts.forEach((element) =>
       renderBlogPosts(
@@ -20,9 +21,7 @@ fetch(`${baseURL}?_embed`, {
         false
       )
     );
-    console.log(parsedPosts);
     const slidesArray = document.querySelectorAll(".slides");
-    console.log(slidesArray);
     slidesArray[0].classList.add("active");
     document
       .querySelector("#forward--button")
@@ -30,6 +29,7 @@ fetch(`${baseURL}?_embed`, {
     document
       .querySelector("#backward--button")
       .addEventListener("click", () => changeSlides(decrement, slidesArray));
+    document.querySelector(".spinner").style.display = "none";
   })
 );
 
