@@ -2,6 +2,7 @@ import { baseURL, password, username, postComment } from "./imports.js";
 const queryString = document.location.search;
 const parameters = new URLSearchParams(queryString);
 const blogID = parameters.get("id");
+document.querySelector(".spinner").style.display = "block";
 
 fetch(`${baseURL}${blogID}`, {
   method: "GET",
@@ -25,6 +26,7 @@ fetch(`${baseURL}${blogID}`, {
         }
       });
     });
+    document.querySelector(".spinner").style.display = "none";
   })
 );
 
