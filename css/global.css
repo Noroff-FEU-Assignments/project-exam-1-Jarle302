@@ -108,9 +108,20 @@ p {
 /*Spinner animation made by chatGPT*/
 
 .spinner {
+  width: 100px;
+  height: 100px;
+  display: none;
+}
+
+.spinner::after {
+  content: "";
   animation: spinner 2s linear infinite;
-  object-fit: contain;
-  width: 70px;
+  height: 100px;
+  display: block;
+  border-radius: 50%;
+  background: #2e2e2e;
+  border-top: #6cf5e7 solid 5px;
+  box-shadow: 1px 4px 6px white;
 }
 
 @keyframes spinner {

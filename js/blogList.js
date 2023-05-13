@@ -12,6 +12,7 @@ fetchBlog();
 document
   .querySelector(".blog-list__button--view-more")
   .addEventListener("click", () => {
+    document.querySelector(".spinnerTwo").style.display = "block";
     fetchBlog();
   });
 
@@ -33,6 +34,7 @@ function fetchBlogposts() {
           )
         )
     );
+    document.querySelector(".spinnerTwo").style.display = "none";
     pageNum++;
     console.log(pageNum);
   }

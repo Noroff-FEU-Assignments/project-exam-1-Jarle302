@@ -67,3 +67,10 @@ h1 {
   margin: 20px auto;
   width: 243px;
 }
+
+.spinnerTwo {
+  position: absolute;
+  left: 40%;
+  transform: translate(20%, 36%px);
+  transform: translateY(-196px);
+}
