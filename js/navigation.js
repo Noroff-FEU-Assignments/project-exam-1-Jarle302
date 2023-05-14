@@ -68,15 +68,18 @@ document.querySelector(
     name="input--subscribe"
     id="input--subscribe"
     type="text"
-    default="yourEmail@email.com"
+    placeholder="yourEmail@email.com"
   />
-  <button>Subscribe!</button>
+  <button class="btn btn--alternate">Subscribe!</button>
   <div>
-  <a href="www.facebook.com">
+  <a class="social-media-icons" href="www.facebook.com">
   <i class="fa-brands fa-facebook"></i>
   </a>
-  <a href="www.instagram.com">
+  <a class="social-media-icons" href="www.instagram.com">
   <i class="fa-brands fa-instagram"></i>
+  </a>
+  <a class="social-media-icons" href="www.twitter.com">
+  <i class="fa-brands fa-twitter"></i>
   </a>
   </div> <p class="footer__p--copyright"> Copyright © Jarle Tollaksen 2023</p>;
   </section>;
