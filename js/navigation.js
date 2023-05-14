@@ -86,3 +86,8 @@ document.querySelector(
   </div> <p class="footer__p--copyright"> Copyright © Jarle Tollaksen 2023</p>;
   </section>;
   `;
+
+document.querySelector("#input--subscribe").addEventListener("focus", () => {
+  document.querySelector(".input--subscribe--label").style.display = "block";
+  document.querySelector("#input--subscribe").placeholder = "";
+});

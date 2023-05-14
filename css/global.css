@@ -175,6 +175,11 @@ button:hover {
   font-size: 1rem;
 }
 
+.input--subscribe--label {
+  display: none;
+  color: white;
+}
+
 section {
   display: flex;
   justify-content: center;
