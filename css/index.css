@@ -40,6 +40,10 @@ p {
   border-radius: 0 21px 21px 0;
 }
 
+.btn--contact {
+  margin: 40px 0;
+}
+
 /* reuse comments styling for rewview*/
 
 .comments--container {
@@ -99,6 +103,13 @@ p {
 .testimonials {
   grid-column: 3/5;
   max-width: 400px;
+}
+
+.user-info {
+  display: flex;
+}
+.comments--avatar {
+  transform: none;
 }
 
 @media screen and (max-width: 833px) {

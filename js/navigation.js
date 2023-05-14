@@ -17,7 +17,7 @@ function renderNavigation(domEl, ...links) {
       .join("")}
         
     </ul>
-    <button class="hamburger-menu__button">
+    <button class="hamburger-menu__button btn--big-font">
     <i class="fa-solid fa-bars"></i></button>
 </nav>`;
 }
@@ -52,3 +52,32 @@ function isActive(element) {
     ? true
     : false;
 }
+
+document.querySelector(
+  "footer"
+).innerHTML = `<section class="wrapper footer__section">
+  <h2>The Synthetic Scribe</h2>
+  <a href="/index.html"><img class="footer__img" src="/assets/logo.png" /img></a>
+  <h3>
+  Subscribe for random subject updates!
+  </h2>
+  <label class="input--subscribe--label" for="input--subscribe">
+    yourEmail@email.com
+  </label>
+  <input
+    name="input--subscribe"
+    id="input--subscribe"
+    type="text"
+    default="yourEmail@email.com"
+  />
+  <button>Subscribe!</button>
+  <div>
+  <a href="www.facebook.com">
+  <i class="fa-brands fa-facebook"></i>
+  </a>
+  <a href="www.instagram.com">
+  <i class="fa-brands fa-instagram"></i>
+  </a>
+  </div> <p class="footer__p--copyright"> Copyright © Jarle Tollaksen 2023</p>;
+  </section>;
+  `;

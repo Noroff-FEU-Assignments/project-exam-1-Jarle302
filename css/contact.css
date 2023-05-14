@@ -3,6 +3,10 @@
   flex-direction: column;
 }
 
+.contact__section {
+  display: block;
+}
+
 input[type="text"] {
   border: none;
   border-bottom: 1px solid var(--third-color);

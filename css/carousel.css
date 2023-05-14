@@ -20,12 +20,6 @@ section {
   display: none;
 }
 
-button {
-  border: none;
-  background: #00000045;
-  font-size: 2rem;
-}
-
 .active {
   display: flex;
   flex-direction: column;

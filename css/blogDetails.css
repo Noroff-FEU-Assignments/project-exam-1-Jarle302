@@ -6,6 +6,7 @@ main {
 
 section {
   padding: 20px;
+  flex-direction: column;
 }
 
 .img-modal {
