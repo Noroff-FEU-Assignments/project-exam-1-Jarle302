@@ -32,7 +32,9 @@ renderNavigation(
 
 document
   .querySelectorAll(".nav__ul__li__a")
-  .forEach((element) => isActive(element) && element.classList.add("active"));
+  .forEach(
+    (element) => isActive(element) && element.classList.add("active--nav")
+  );
 
 document
   .querySelector(".hamburger-menu__button")
@@ -58,9 +60,9 @@ document.querySelector(
 ).innerHTML = `<section class="wrapper footer__section">
   <h2>The Synthetic Scribe</h2>
   <a href="/index.html"><img class="footer__img" src="/assets/logo.png" /img></a>
-  <h3>
+  <h3 class="footer__h3">
   Subscribe for random subject updates!
-  </h2>
+  </h3>
   <label class="input--subscribe--label" for="input--subscribe">
     yourEmail@email.com
   </label>
@@ -72,13 +74,13 @@ document.querySelector(
   />
   <button class="btn btn--alternate">Subscribe!</button>
   <div>
-  <a class="social-media-icons" href="www.facebook.com">
+  <a class="social-media-icons" href="https://www.facebook.com/">
   <i class="fa-brands fa-facebook"></i>
   </a>
-  <a class="social-media-icons" href="www.instagram.com">
+  <a class="social-media-icons" href="https://www.instagram.com">
   <i class="fa-brands fa-instagram"></i>
   </a>
-  <a class="social-media-icons" href="www.twitter.com">
+  <a class="social-media-icons" href="https://www.twitter.com">
   <i class="fa-brands fa-twitter"></i>
   </a>
   </div> <p class="footer__p--copyright"> Copyright © Jarle Tollaksen 2023</p>;

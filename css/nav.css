@@ -37,6 +37,14 @@ nav {
   box-shadow: 1px 1px 3px black;
 }
 
+.active--nav {
+  color: #000000;
+  background-color: var(--secondary-color);
+  box-shadow: 1px 1px 3px black;
+  border-radius: 3px;
+  padding: 2px;
+}
+
 @media screen and (max-width: 600px) {
   .hamburger-menu__button {
     display: block;

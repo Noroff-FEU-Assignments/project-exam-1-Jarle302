@@ -170,6 +170,11 @@ button:hover {
   font-size: 0.8rem;
 }
 
+.footer__h3 {
+  max-width: 205px;
+  font-size: 1rem;
+}
+
 section {
   display: flex;
   justify-content: center;
