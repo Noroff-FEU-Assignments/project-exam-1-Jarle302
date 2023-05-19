@@ -87,6 +87,7 @@ const orderByButton = document.querySelector(".button--order-by--date");
 
 orderByButton.addEventListener("click", (e) => {
   e.preventDefault();
+  document.querySelector(".spinnerTwo").style.display = "block";
   searchObject.order =
     document.querySelector(`input[name="sortByDate"]:checked`).value || "desc";
   console.log(searchObject);

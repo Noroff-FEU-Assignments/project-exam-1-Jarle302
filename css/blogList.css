@@ -93,8 +93,5 @@ h1 {
 }
 
 .spinnerTwo {
-  position: absolute;
-  left: 40%;
-  transform: translate(20%, 36%px);
-  transform: translateY(-196px);
+  align-self: center;
 }
