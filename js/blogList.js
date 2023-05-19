@@ -24,13 +24,14 @@ document
           "#bloglist__input--search"
         ).value)
       : (searchObject.search = "");
-    console.log(searchObject);
   });
 
 document
   .querySelector(".blog-list__button--view-more")
   .addEventListener("click", () => {
-    document.querySelector(".spinnerTwo").style.display = "block";
+    document
+      .querySelectorAll(".spinnerTwo")
+      .forEach((element) => (element.style.display = "block"));
     fetchBlog(searchObject);
   });
 
@@ -69,7 +70,9 @@ function fetchBlogposts() {
             document.querySelector(".blog-list__section--container", false)
           )
         );
-        document.querySelector(".spinnerTwo").style.display = "none";
+        document
+          .querySelectorAll(".spinnerTwo")
+          .forEach((element) => (element.style.display = "none"));
         pageNum++;
       })
       .catch((err) => {
