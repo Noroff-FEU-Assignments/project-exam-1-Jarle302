@@ -38,10 +38,39 @@
   <body>
     <header></header>
     <main>
-      <h1>Explore our Blog: A Compilation of Our Latest Posts</h1>
-      <section class="blog-list__section--container"></section>
-      <button class="btn blog-list__button--view-more">Load more posts</button>
-      <div class="spinner spinnerTwo"></div>
+      <div class="wrapper blog-list--container">
+        <div class="search-bar">
+          <form action="">
+            <div class="search-bar--search">
+              <input
+                type="text"
+                name="bloglist__input--search"
+                id="bloglist__input--search"
+                placeholder="Search" />
+
+              <button class="btn button--order-by--date">Search</button>
+            </div>
+            <input
+              type="radio"
+              name="sortByDate"
+              id="sortByDate--latest"
+              value="desc" />
+            <label for="sortByDate--latest">Latest</label>
+            <label for="sortByDate--oldest">Oldest</label>
+            <input
+              type="radio"
+              name="sortByDate"
+              id="sortByDate--oldest"
+              value="asc" />
+          </form>
+        </div>
+        <h1>Explore our Blog: A Compilation of Our Latest Posts</h1>
+        <section class="blog-list__section--container"></section>
+        <button class="btn blog-list__button--view-more">
+          Load more posts
+        </button>
+        <div class="spinner spinnerTwo"></div>
+      </div>
     </main>
     <footer></footer>
   </body>

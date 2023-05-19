@@ -3,8 +3,27 @@
   justify-content: space-evenly;
 }
 
+.container{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px auto;
+  height: 90vh;
+  flex-wrap: wrap;
+}
+
+.div--hero{
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .index__hero--image {
   max-width: 400px;
+  height: 220px;
+  object-fit: cover;
   border-radius: 21px;
   border: 3px solid var(--third-color);
 }
@@ -14,17 +33,21 @@
   flex: 1 1 100%;
 }
 
-p {
-  max-width: none;
+.container--bottom{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .p--blog-description {
   max-width: 400px;
 }
 
+
 .carousel--container {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
 }
 
 .button--container {
@@ -53,7 +76,7 @@ p {
 }
 
 .comments--avatar {
-  width: 45px;
+  width: 40px;
   border-radius: 50px;
   transform: translate(4px, 16px);
 }
@@ -62,8 +85,13 @@ p {
   background: var(--fourth-color);
   border: 1px solid var(--secondary-color);
   border-radius: 21px;
-  padding: 0 20px;
+  padding: 20px;
   max-width: 400px;
+  margin: 15px auto;
+}
+
+.blog--comment p {
+  padding: 20px 0 0;
 }
 
 .comments--date {
@@ -96,8 +124,8 @@ p {
 }
 
 .index__section--updates {
-  display: block;
-  grid-column: 1/3;
+display: block;
+
 }
 
 .testimonials {
@@ -107,9 +135,12 @@ p {
 
 .user-info {
   display: flex;
+  align-items: center;
 }
 .comments--avatar {
   transform: none;
+  height: 40px;
+  margin-right: 10px;
 }
 
 @media screen and (max-width: 833px) {

@@ -1,6 +1,8 @@
 export const username = "jarlehtollaksen2@live.no";
 export const password = `5PWI pcln 2hoE 1Tid H0Nn UfOl`;
 export const baseURL = "https://jarleblogg.no/wp-json/wp/v2/posts/";
+
+/*Blog post content */
 export function renderBlogPosts(
   { title, text, imgURL, date, modified, id },
   domEl,

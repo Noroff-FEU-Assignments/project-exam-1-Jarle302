@@ -4,18 +4,21 @@ header {
 .hamburger-menu__button {
   display: none;
 }
+.nav--main{
+  display: flex;
+  align-items: center;
+}
 
 .nav__ul {
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 25px;
 }
 
 .logo-image {
-  width: 80px;
+  width: 60px;
   border-radius: 21px;
-  height: 86px;
   border: 2px solid var(--secondary-color);
 }
 
@@ -24,6 +27,7 @@ header {
   color: rgb(255, 255, 255);
   transition: transform 700ms;
   display: flex;
+  text-transform: capitalize;
 }
 
 nav {
@@ -42,7 +46,7 @@ nav {
   background-color: var(--secondary-color);
   box-shadow: 1px 1px 3px black;
   border-radius: 3px;
-  padding: 2px;
+  padding: 5px 10px;
 }
 
 @media screen and (max-width: 600px) {
