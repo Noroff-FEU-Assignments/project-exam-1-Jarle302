@@ -6,14 +6,13 @@
 .slides {
   max-width: 400px;
   display: none;
-  border-radius: 22px;
   text-decoration: none;
 }
 
 .slides--container--textbox {
   overflow: hidden;
   background-color: var(--fourth-color);
-  max-height: 177px;
+  min-height: 94px;
 }
 
 .slides__p--breadtext {
