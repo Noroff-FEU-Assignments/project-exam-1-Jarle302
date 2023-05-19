@@ -156,6 +156,13 @@ button:hover {
 .footer__section {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer__div--subscribe {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .footer__h2 {

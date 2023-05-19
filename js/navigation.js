@@ -71,7 +71,7 @@ document.querySelector(
   <a class="social-media-icons" href="https://www.twitter.com">
   <i class="fa-brands fa-twitter"></i>
   </a>
-  </div> </div><div>
+  </div> </div><div class="footer__div--subscribe">
   <p class="footer__h3">
   Subscribe for random subject updates!
   </p>
