@@ -4,7 +4,7 @@ header {
 .hamburger-menu__button {
   display: none;
 }
-.nav--main{
+.nav--main {
   display: flex;
   align-items: center;
 }
@@ -56,12 +56,10 @@ nav {
   }
 
   .nav__ul {
-    display: none;
-    padding: 40px;
     position: fixed;
     background-color: #2e2e2efc;
     width: 80%;
-    height: 29vh;
+    height: 52vh;
     margin: auto;
     flex-direction: column;
     justify-content: center;
@@ -70,6 +68,7 @@ nav {
     border: 2px solid #68f2e7;
     border-radius: 21px;
     z-index: 100;
+    top: 24px;
   }
 
   .visible {
