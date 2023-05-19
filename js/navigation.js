@@ -58,21 +58,9 @@ function isActive(element) {
 document.querySelector(
   "footer"
 ).innerHTML = `<section class="wrapper footer__section">
-  <h2>The Synthetic Scribe</h2>
+<h2 class="footer__h2">The Synthetic Scribe</h2>
+<div>
   <a href="/index.html"><img class="footer__img" src="/assets/logo.png" /img></a>
-  <h3 class="footer__h3">
-  Subscribe for random subject updates!
-  </h3>
-  <label class="input--subscribe--label" for="input--subscribe">
-    yourEmail@email.com
-  </label>
-  <input
-    name="input--subscribe"
-    id="input--subscribe"
-    type="text"
-    placeholder="yourEmail@email.com"
-  />
-  <button class="btn btn--alternate">Subscribe!</button>
   <div>
   <a class="social-media-icons" href="https://www.facebook.com/">
   <i class="fa-brands fa-facebook"></i>
@@ -83,7 +71,21 @@ document.querySelector(
   <a class="social-media-icons" href="https://www.twitter.com">
   <i class="fa-brands fa-twitter"></i>
   </a>
-  </div> <p class="footer__p--copyright"> Copyright © Jarle Tollaksen 2023</p>;
+  </div> </div><div>
+  <p class="footer__h3">
+  Subscribe for random subject updates!
+  </p>
+  <label class="input--subscribe--label" for="input--subscribe">
+    yourEmail@email.com
+  </label>
+  <input
+    name="input--subscribe"
+    id="input--subscribe"
+    type="text"
+    placeholder="yourEmail@email.com"
+  />
+  <button class="btn btn--alternate">Subscribe!</button></div>
+  <p class="footer__p--copyright"> Copyright © Jarle Tollaksen 2023</p>;
   </section>;
   `;
 
