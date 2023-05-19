@@ -85,7 +85,8 @@ function fetchBlogposts() {
 
 const orderByButton = document.querySelector(".button--order-by--date");
 
-orderByButton.addEventListener("click", () => {
+orderByButton.addEventListener("click", (e) => {
+  e.preventDefault();
   searchObject.order =
     document.querySelector(`input[name="sortByDate"]:checked`).value || "desc";
   console.log(searchObject);
