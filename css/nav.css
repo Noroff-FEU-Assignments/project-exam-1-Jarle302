@@ -57,7 +57,6 @@ nav {
     display: block;
     color: white;
     z-index: 30;
-    background-color: none;
   }
 
   .nav__ul {
