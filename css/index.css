@@ -149,4 +149,7 @@ h1 {
   .wrapper--index {
     padding: 20px;
   }
+  .container--bottom {
+    gap: 40px;
+  }
 }
