@@ -7,6 +7,10 @@ h1 {
   font-size: 1.5rem;
 }
 
+.div--hero__h2 {
+  font-size: 1rem;
+}
+
 .container {
   width: 100%;
   display: flex;
@@ -51,6 +55,7 @@ h1 {
 .carousel--container {
   display: flex;
   justify-content: flex-start;
+  margin: 15px auto;
 }
 
 .button--container {
