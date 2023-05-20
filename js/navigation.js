@@ -93,3 +93,13 @@ document.querySelector("#input--subscribe").addEventListener("focus", () => {
   document.querySelector(".input--subscribe--label").style.display = "block";
   document.querySelector("#input--subscribe").placeholder = "";
 });
+
+window.addEventListener("scroll", () => {
+  if (scrollY > 0) {
+    document.querySelector("header").classList.add("isScrolled--header");
+    document.querySelector(".logo-image").classList.add("isScrolled--img");
+  } else {
+    document.querySelector("header").classList.remove("isScrolled--header");
+    document.querySelector(".logo-image").classList.remove("isScrolled--img");
+  }
+});

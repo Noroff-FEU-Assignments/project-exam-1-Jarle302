@@ -51,6 +51,15 @@ nav {
   border-radius: 3px;
   padding: 5px 10px;
 }
+.isScrolled--header {
+  width: 100%;
+  z-index: 10;
+  height: 43px;
+}
+.isScrolled--img {
+  width: 40px;
+  border-radius: 21px;
+}
 
 @media screen and (max-width: 600px) {
   .hamburger-menu__button {
