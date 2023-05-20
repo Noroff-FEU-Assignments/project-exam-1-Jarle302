@@ -191,8 +191,11 @@ button:hover {
 }
 
 .input--subscribe--label {
-  display: none;
+  opacity: 0;
   color: white;
+  transform: translate(7px, 21px);
+  font-size: 0.8rem;
+  transition: opacity 300ms ease-in;
 }
 
 /*

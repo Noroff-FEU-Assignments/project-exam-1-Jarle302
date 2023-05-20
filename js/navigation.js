@@ -90,7 +90,7 @@ document.querySelector(
   `;
 
 document.querySelector("#input--subscribe").addEventListener("focus", () => {
-  document.querySelector(".input--subscribe--label").style.display = "block";
+  document.querySelector(".input--subscribe--label").style.opacity = 1;
   document.querySelector("#input--subscribe").placeholder = "";
 });
 
