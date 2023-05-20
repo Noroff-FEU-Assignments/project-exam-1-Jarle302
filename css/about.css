@@ -12,6 +12,10 @@ h1 {
   text-align: center;
 }
 
+h2,
+h3 {
+  margin: 20px 0 2px 0;
+}
 @media screen and (max-width: 850px) {
   section {
     flex-direction: column;
