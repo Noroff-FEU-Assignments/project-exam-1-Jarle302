@@ -60,7 +60,7 @@ nav {
   }
 
   .nav__ul {
-    display: none;
+    display: flex;
     position: fixed;
     background-color: #2e2e2efc;
     width: 100%;
@@ -74,9 +74,11 @@ nav {
     z-index: 20;
     top: 0px;
     left: 0;
+    translate: -100%;
+    transition: translate 300ms ease-in-out;
   }
 
   .visible {
-    display: flex;
+    translate: 0;
   }
 }
