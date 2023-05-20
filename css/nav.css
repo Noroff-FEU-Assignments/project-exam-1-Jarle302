@@ -75,7 +75,7 @@ nav {
     top: 0px;
     left: 0;
     translate: -100%;
-    transition: translate 300ms ease-in-out;
+    transition: translate 200ms ease-in-out;
   }
 
   .visible {
