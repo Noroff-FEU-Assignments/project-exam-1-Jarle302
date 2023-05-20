@@ -19,6 +19,9 @@ body {
   font-family: "Montserrat", sans-serif;
   background-color: var(--main-color);
 }
+main {
+  margin-top: 84px;
+}
 
 header,
 footer {

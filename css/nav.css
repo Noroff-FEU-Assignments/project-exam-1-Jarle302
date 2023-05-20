@@ -1,5 +1,8 @@
 header {
   padding: 5px 1%;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
 }
 .hamburger-menu__button {
   display: none;
@@ -53,23 +56,24 @@ nav {
   .hamburger-menu__button {
     display: block;
     color: white;
+    z-index: 30;
   }
 
   .nav__ul {
     display: none;
     position: fixed;
     background-color: #2e2e2efc;
-    width: 80%;
+    width: 100%;
     height: 52vh;
-    margin: auto;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 52px;
-    border: 2px solid #68f2e7;
+    border-bottom: 4px solid #68f2e7;
     border-radius: 21px;
-    z-index: 100;
-    top: 24px;
+    z-index: 20;
+    top: 0px;
+    left: 0;
   }
 
   .visible {

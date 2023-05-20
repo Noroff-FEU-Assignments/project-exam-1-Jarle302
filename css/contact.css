@@ -5,6 +5,7 @@
 
 .contact__section {
   display: block;
+  padding: 50px;
 }
 
 input[type="text"] {
