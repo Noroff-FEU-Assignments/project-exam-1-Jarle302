@@ -72,3 +72,13 @@ export function postComment(postID, ...domElements) {
     .then((res) => res.json())
     .then((data) => console.log(data));
 }
+
+//modal
+
+export function closeModal(modalClass) {
+  document.addEventListener("click", (e) => {
+    if (!document.querySelector(`.${modalClass}`).contains(e.target)) {
+      document.querySelector(`.${modalClass}`).style.display = "none";
+    }
+  });
+}

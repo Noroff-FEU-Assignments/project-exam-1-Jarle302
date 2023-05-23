@@ -45,19 +45,24 @@
         </div>
         <form class="form--contact" action="POST">
           <label for="input--name">Name</label>
-          <input name="input--name" id="input--name" type="text" />
+          <input name="your-name" id="input--name" type="text" />
           <label for="input--email">Email</label>
-          <input name="input--email"" id="input--email"" type="text">
+          <input name="your-email"" id="input--email"" type="text">
           <label for="input--subject">Subject</label>
-          <input name="input--subject" id="input--subject" type="text" />
+          <input name="your-subject" id="input--subject" type="text" />
           <label for="input--message">Message</label>
           <textarea
-            name="input--message"
+            name="your-message"
             id="input--message"
             cols="30"
             rows="10"></textarea>
           <button class="btn">Send</button>
         </form>
+        <div class="spinner spinner--contact"></div>
+        <div class="modal--contact">
+          <h2>Success</h2>
+          <p>Your message has been sent, thank you for your message!</p>
+        </div>
       </section>
     </main>
     <footer></footer>
