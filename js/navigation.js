@@ -1,4 +1,4 @@
-import { postToWP } from "./imports.js";
+import { postToWP, validateInput } from "./imports.js";
 
 function renderNavigation(domEl, ...links) {
   document.querySelector(domEl).innerHTML = `<nav class="nav--main wrapper">
@@ -116,3 +116,10 @@ window.addEventListener("scroll", () => {
 document.querySelector(".btn--footer").addEventListener("click", (e) => {
   postToWP(e, "822", "modal--subscribe", "form--subscribe", "spinner--nav");
 });
+
+//regen gotten from chatGPT
+validateInput(
+  (value) => /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(value),
+  document.querySelector("#input--subscribe"),
+  "Please input a valid email address"
+);
