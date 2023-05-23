@@ -1,3 +1,5 @@
+import { postToWP } from "./imports.js";
+
 function renderNavigation(domEl, ...links) {
   document.querySelector(domEl).innerHTML = `<nav class="nav--main wrapper">
   <a href="/index.html"> <img class="logo-image" src="/assets/logo.png" alt="" /> </a>
@@ -75,17 +77,24 @@ document.querySelector(
   <p class="footer__h3">
   Subscribe for random subject updates!
   </p>
+  <form class="form--subscribe">
+  <div class="spinner spinner--nav"></div>
   <label class="input--subscribe--label" for="input--subscribe">
     yourEmail@email.com
   </label>
   <input
-    name="input--subscribe"
+    name="your-email"
     id="input--subscribe"
     type="text"
     placeholder="yourEmail@email.com"
   />
-  <button class="btn btn--alternate">Subscribe!</button></div>
+  <button class="btn btn--alternate btn--footer">Subscribe!</button></div>
+  </form>
   <p class="footer__p--copyright"> Copyright © Jarle Tollaksen 2023</p>;
+  <div class="modal--subscribe">
+          <h2>Success</h2>
+          <p>You have successfully subscribed!</p>
+        </div>
   </section>;
   `;
 
@@ -102,4 +111,8 @@ window.addEventListener("scroll", () => {
     document.querySelector("header").classList.remove("isScrolled--header");
     document.querySelector(".logo-image").classList.remove("isScrolled--img");
   }
+});
+
+document.querySelector(".btn--footer").addEventListener("click", (e) => {
+  postToWP(e, "822", "modal--subscribe", "form--subscribe", "spinner--nav");
 });

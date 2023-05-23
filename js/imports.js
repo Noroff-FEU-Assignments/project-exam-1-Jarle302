@@ -82,3 +82,28 @@ export function closeModal(modalClass) {
     }
   });
 }
+
+export function postToWP(e, id, modal, form, spinner) {
+  e.preventDefault();
+  const contactData = new FormData(document.querySelector(`.${form}`));
+  document.querySelector(`.${spinner}`).style.display = "block";
+  fetch(
+    `https://jarleblogg.no/wp-json/contact-form-7/v1/contact-forms/${id}/feedback`,
+    {
+      method: "POST",
+      headers: {
+        Authorization: "Basic " + btoa(`${username}:${password}`),
+      },
+      body: contactData,
+    }
+  )
+    .then((res) => res.json())
+    .then((data) => {
+      document
+        .querySelectorAll("input[type='text'],textarea")
+        .forEach((element) => (element.value = ""));
+      document.querySelector(`.${modal}`).style.display = "flex";
+      document.querySelector(`.${spinner}`).style.display = "none";
+      closeModal(`${modal}`);
+    });
+}
