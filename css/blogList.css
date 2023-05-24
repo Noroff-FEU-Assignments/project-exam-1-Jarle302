@@ -1,10 +1,15 @@
 .blog-list--container {
   display: flex;
   flex-direction: column;
+  padding-block: 80px;
 }
 .search-bar {
   align-self: center;
   margin: 30px 0px;
+}
+.blog-list--h2 {
+  flex-basis: 100%;
+  text-align: center;
 }
 
 label {
