@@ -103,16 +103,6 @@ document.querySelector("#input--subscribe").addEventListener("focus", () => {
   document.querySelector("#input--subscribe").placeholder = "";
 });
 
-window.addEventListener("scroll", () => {
-  if (scrollY > 0) {
-    document.querySelector("header").classList.add("isScrolled--header");
-    document.querySelector(".logo-image").classList.add("isScrolled--img");
-  } else {
-    document.querySelector("header").classList.remove("isScrolled--header");
-    document.querySelector(".logo-image").classList.remove("isScrolled--img");
-  }
-});
-
 document.querySelector(".btn--footer").addEventListener("click", (e) => {
   postToWP(e, "822", "modal--subscribe", "form--subscribe", "spinner--nav");
 });
