@@ -77,6 +77,9 @@ function fetchBlogposts() {
       })
       .catch((err) => {
         console.log(err);
+        document
+          .querySelectorAll(".spinnerTwo")
+          .forEach((element) => (element.style.display = "none"));
         return;
       });
     // document.querySelector(".spinnerTwo").style.display = "none";
