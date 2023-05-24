@@ -13,6 +13,7 @@ fetch(`${baseURL}?_embed`, {
   headers: { Authorization: "Basic " + btoa(`${username}:${password}`) },
 }).then((res) =>
   res.json().then((data) => {
+    console.log(data);
     const parsedPosts = processResponse(data);
     parsedPosts.forEach((element) =>
       renderBlogPosts(

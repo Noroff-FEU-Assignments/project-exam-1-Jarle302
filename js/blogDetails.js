@@ -18,6 +18,7 @@ fetch(`${baseURL}${blogID}`, {
         console.log({ img });
         document.querySelector(".img-modal").style.display = "block";
         document.querySelector(".img-modal__img").src = img.src;
+        document.querySelector(".img-modal__img").alt = img.alt;
       });
       //gotten from chat-gpt
       document.addEventListener("click", (e) => {

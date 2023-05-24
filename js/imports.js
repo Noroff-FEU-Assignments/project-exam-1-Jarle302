@@ -4,7 +4,7 @@ export const baseURL = "https://jarleblogg.no/wp-json/wp/v2/posts/";
 
 /*Blog post content */
 export function renderBlogPosts(
-  { title, text, imgURL, date, modified, id },
+  { title, text, imgURL, date, modified, id, alt },
   domEl,
   isBackgroundImg = false
 ) {
@@ -14,7 +14,7 @@ export function renderBlogPosts(
   }); background-position: center; background-size:cover;">
   ${
     !isBackgroundImg
-      ? `<div class="img--container"><img src="${imgURL}" alt=""></div>`
+      ? `<div class="img--container"><img src="${imgURL}" alt=${alt}></div>`
       : ""
   }
    <div class="slides--container--textbox"><p class="carousel--date">${date}</p><p class="slides__tag--featured">${
@@ -37,6 +37,9 @@ export function processResponse(arr) {
       ? element._embedded["wp:featuredmedia"][0].media_details.sizes.full
           .source_url
       : "";
+    newObject.alt = element._embedded["wp:featuredmedia"]
+      ? element._embedded["wp:featuredmedia"][0].slug
+      : "";
 
     newArr.push(newObject);
   });
@@ -48,14 +51,34 @@ export function validateInput(
   callback,
   domEl,
   errMessage,
-  succMessage = ` <p class="success-message" ><i class="fa-regular fa-square-check";"></i> Done <p>`
+  succMessage = ` <p class="success-message" ><i class="fa-regular fa-square-check";"></i> Done <p>`,
+  button,
+  ...domElements
 ) {
   const errorDiv = document.createElement("span");
   errorDiv.classList.add("error");
   domEl.insertAdjacentElement("afterEnd", errorDiv);
   domEl.addEventListener("blur", () => {
     errorDiv.innerHTML = callback(domEl.value) ? succMessage : errMessage;
+    callback(domEl.value)
+      ? (domEl.validated = true)
+      : (domEl.validated = false);
+    if (domElements.length > 0) {
+      isFormValidated(button, domElements);
+    }
   });
+}
+
+export function isFormValidated(button, domElements) {
+  let allPassedValidation = 0;
+  domElements.forEach((element) => {
+    if (element.validated) {
+      allPassedValidation++;
+    }
+  });
+  allPassedValidation === domElements.length
+    ? (button.disabled = false)
+    : (button.disabled = true);
 }
 
 //first domel = content, second = author, third subject will get the same prop name as the input name

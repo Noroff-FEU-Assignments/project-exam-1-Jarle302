@@ -88,7 +88,7 @@ document.querySelector(
     type="text"
     placeholder="yourEmail@email.com"
   />
-  <button class="btn btn--alternate btn--footer">Subscribe!</button></div>
+  <button disabled=true class="btn btn--alternate btn--footer">Subscribe!</button></div>
   </form>
   <p class="footer__p--copyright"> Copyright © Jarle Tollaksen 2023</p>;
   <div class="modal--subscribe">
@@ -117,9 +117,12 @@ document.querySelector(".btn--footer").addEventListener("click", (e) => {
   postToWP(e, "822", "modal--subscribe", "form--subscribe", "spinner--nav");
 });
 
-//regen gotten from chatGPT
+//regex gotten from chatGPT
 validateInput(
   (value) => /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(value),
   document.querySelector("#input--subscribe"),
-  "Please input a valid email address"
+  "Please input a valid email address",
+  ` <p class="success-message" ><i class="fa-regular fa-square-check";"></i> Done <p>`,
+  document.querySelector(".btn--footer"),
+  document.querySelector("#input--subscribe")
 );
