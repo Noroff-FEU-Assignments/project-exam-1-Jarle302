@@ -5,6 +5,7 @@
   --fourth-color: #141415;
   --header-footer-color: #4eaba3;
   --success: #006400;
+  --background-wideScreen: #424242;
 }
 
 * {
@@ -35,9 +36,18 @@ footer {
 }
 
 .wrapper {
+  background-color: var(--main-color);
   padding: 0 20px;
   max-width: 1350px;
   margin: auto;
+}
+
+.wrapper--nav {
+  background-color: var(--fourth-color);
+}
+
+main {
+  background-image: url(/assets/backendImage.png);
 }
 
 label,

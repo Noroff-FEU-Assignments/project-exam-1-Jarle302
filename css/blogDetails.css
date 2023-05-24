@@ -62,7 +62,7 @@ form {
 }
 
 label {
-  color: var(--third-color);
+  color: white;
 }
 
 .comments--date {
@@ -75,6 +75,6 @@ label {
   border-radius: 7px;
   padding: 15px;
   max-width: max-content;
-  color: var(--third-color);
+  color: white;
   box-shadow: 2px 3px 4px black;
 }

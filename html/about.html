@@ -37,32 +37,34 @@
   <body>
     <header></header>
     <main>
-      <h1>About</h1>
-      <section>
-        <div>
-          <h2>Purpose</h2>
-          <p>
-            This blog is made as my exam project first year studying front end
-            development at noroff. I could make a blog about anything, i decided
-            to create a automatic blog, so i first made a backend app that
-            creates blog posts and makes images that fits the content without
-            having to be manually prompted.
-          </p>
-          <h3>How it works</h3>
-          <p>
-            The blog is generating the posts using openAis api, where it gets
-            prompted to create a blog post. As part of the process, the API also
-            dynamically creates images that fit the text of the post. The
-            generated content is then posted to WordPress, which serves as a
-            headless CMS for our blog. The front end of the website fetches
-            posts from the WordPress API to display them in a blog format.
-            Additionally, our backend is set to automatically create a new post
-            every day on a timer, providing a steady stream of fresh content for
-            our readers all by itself."
-          </p>
-        </div>
-        <img class="about__img" src="/assets/about.png" alt="" />
-      </section>
+      <div class="wrapper">
+        <h1>About</h1>
+        <section>
+          <div>
+            <h2>Purpose</h2>
+            <p>
+              This blog is made as my exam project first year studying front end
+              development at noroff. I could make a blog about anything, i
+              decided to create a automatic blog, so i first made a backend app
+              that creates blog posts and makes images that fits the content
+              without having to be manually prompted.
+            </p>
+            <h3>How it works</h3>
+            <p>
+              The blog is generating the posts using openAis api, where it gets
+              prompted to create a blog post. As part of the process, the API
+              also dynamically creates images that fit the text of the post. The
+              generated content is then posted to WordPress, which serves as a
+              headless CMS for our blog. The front end of the website fetches
+              posts from the WordPress API to display them in a blog format.
+              Additionally, our backend is set to automatically create a new
+              post every day on a timer, providing a steady stream of fresh
+              content for our readers all by itself."
+            </p>
+          </div>
+          <img class="about__img" src="/assets/about.png" alt="" />
+        </section>
+      </div>
     </main>
     <footer></footer>
   </body>

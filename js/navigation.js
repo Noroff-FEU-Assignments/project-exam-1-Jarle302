@@ -2,7 +2,7 @@ import { postToWP, validateInput } from "./imports.js";
 
 function renderNavigation(domEl, ...links) {
   document.querySelector(domEl).innerHTML = `<nav class="nav--main wrapper">
-  <a href="/index.html"> <img class="logo-image" src="/assets/logo.png" alt="" /> </a>
+  <a href="/index.html"> <img class="logo-image" src="/assets/logo.png" alt="Artwork of a pale human face, made out of what looks like a plaster like material" /> </a>
 
     <ul class="nav__ul">
     ${links
@@ -19,7 +19,7 @@ function renderNavigation(domEl, ...links) {
       .join("")}
         
     </ul>
-    <button class="hamburger-menu__button btn--big-font">
+    <button aria-label="hamburger menu button" class="hamburger-menu__button btn--big-font">
     <i class="fa-solid fa-bars"></i></button>
 </nav>`;
 }
@@ -62,15 +62,15 @@ document.querySelector(
 ).innerHTML = `<section class="wrapper footer__section">
 <h2 class="footer__h2">The Synthetic Scribe</h2>
 <div>
-  <a href="/index.html"><img class="footer__img" src="/assets/logo.png" /img></a>
+  <a  href="/index.html"><img class="footer__img" src="/assets/logo.png" alt="Artwork of a pale human face, made out of what looks like a plaster like material" /img></a>
   <div>
-  <a class="social-media-icons" href="https://www.facebook.com/">
+  <a aria-label="Facebook" class="social-media-icons" href="https://www.facebook.com/">
   <i class="fa-brands fa-facebook"></i>
   </a>
-  <a class="social-media-icons" href="https://www.instagram.com">
+  <a  aria-label="Instagram" class="social-media-icons" href="https://www.instagram.com">
   <i class="fa-brands fa-instagram"></i>
   </a>
-  <a class="social-media-icons" href="https://www.twitter.com">
+  <a  aria-label="Twitter" class="social-media-icons" href="https://www.twitter.com">
   <i class="fa-brands fa-twitter"></i>
   </a>
   </div> </div><div class="footer__div--subscribe">
@@ -126,3 +126,7 @@ validateInput(
   document.querySelector(".btn--footer"),
   document.querySelector("#input--subscribe")
 );
+
+document
+  .querySelectorAll(".footer__section,nav")
+  .forEach((element) => element.classList.add("wrapper--nav"));

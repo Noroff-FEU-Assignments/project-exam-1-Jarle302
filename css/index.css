@@ -1,10 +1,13 @@
+.wrapper--index {
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+  padding-block: 80px;
+}
+
 .headers-index {
   display: flex;
   justify-content: space-evenly;
-}
-
-h1 {
-  font-size: 1.5rem;
 }
 
 .div--hero__h2 {
@@ -17,7 +20,6 @@ h1 {
   align-items: center;
   justify-content: space-around;
   padding: 20px auto;
-  height: 90vh;
   flex-wrap: wrap;
 }
 
@@ -49,7 +51,7 @@ h1 {
 }
 
 .p--blog-description {
-  max-width: 400px;
+  max-width: 444px;
 }
 
 .carousel--container {

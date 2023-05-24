@@ -1,6 +1,10 @@
 .form--contact {
   display: flex;
   flex-direction: column;
+  border-radius: 23px;
+  background-color: white;
+  width: 266px;
+  padding: 29px;
 }
 
 .contact__section {
@@ -8,7 +12,7 @@
   padding: 50px 0;
 }
 
-input[type="text"] {
+.input--contact {
   border: none;
   border-bottom: 1px solid var(--third-color);
   outline: none;
@@ -27,13 +31,6 @@ main {
   gap: 10px;
   align-items: center;
   background-color: var(--primary-color);
-}
-
-form {
-  border-radius: 23px;
-  background-color: white;
-  width: 266px;
-  padding: 29px;
 }
 
 .headers--container {
