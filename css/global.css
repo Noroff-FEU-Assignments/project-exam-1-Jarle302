@@ -48,6 +48,8 @@ footer {
 
 main {
   background-image: url(/assets/backendImage.png);
+  background-size: cover;
+  background-position: center center;
 }
 
 label,
