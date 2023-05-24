@@ -21,6 +21,7 @@
   justify-content: space-around;
   padding: 20px auto;
   flex-wrap: wrap;
+  min-height: 560px;
 }
 
 .div--hero {
