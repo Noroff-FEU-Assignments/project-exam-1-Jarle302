@@ -50,18 +50,22 @@ document
 
 fetch(`https://jarleblogg.no/wp-json/wp/v2/comments/?post=${blogID}`)
   .then((res) => res.json())
-  .then((data) =>
-    data.forEach(
-      (element) =>
-        (document.querySelector(
+  .then((data) => {
+    data.length > 0
+      ? data.forEach(
+          (element) =>
+            (document.querySelector(
+              ".comments--container"
+            ).innerHTML += `<div class="blog--comment"> <div class="user-info">  <h3> <img class="comments--avatar" src=${
+              element.author_avatar_urls[24]
+            }" alt=""> ${
+              element.author_name
+            } <span class="comments--date">${element.date.replace(
+              "-05T17",
+              ""
+            )}</span></h3></div> ${element.content.rendered} </div> `)
+        )
+      : (document.querySelector(
           ".comments--container"
-        ).innerHTML += `<div class="blog--comment"> <div class="user-info">  <h3> <img class="comments--avatar" src=${
-          element.author_avatar_urls[24]
-        }" alt=""> ${
-          element.author_name
-        } <span class="comments--date">${element.date.replace(
-          "-05T17",
-          ""
-        )}</span></h3></div> ${element.content.rendered} </div> `)
-    )
-  );
+        ).innerHTML += `<div class="blog--comment"> <h3>Be the first to comment!</h3> </div>`);
+  });
