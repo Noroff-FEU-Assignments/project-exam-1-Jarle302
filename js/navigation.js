@@ -104,6 +104,7 @@ document.querySelector("#input--subscribe").addEventListener("focus", () => {
 });
 
 document.querySelector(".btn--footer").addEventListener("click", (e) => {
+  e.preventDefault();
   isFormValidated(document.querySelector("#input--subscribe"))
     ? postToWP(e, "822", "modal--subscribe", "form--subscribe", "spinner--nav")
     : console.log("error");

@@ -69,8 +69,8 @@ export function isFormValidated(...domElements) {
   domElements.forEach((element) => {
     if (element.validated) {
       allPassedValidation++;
-      console.log(allPassedValidation, domElements.length);
-    }
+      element.style.border = "2px green solid";
+    } else element.style.border = "2px red solid";
   });
   return allPassedValidation === domElements.length ? true : false;
 }
