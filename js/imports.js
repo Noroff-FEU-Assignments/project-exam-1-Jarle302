@@ -51,9 +51,7 @@ export function validateInput(
   callback,
   domEl,
   errMessage,
-  succMessage = ` <p class="success-message" ><i class="fa-regular fa-square-check";"></i> Done <p>`,
-  button,
-  ...domElements
+  succMessage = ` <p class="success-message" ><i class="fa-regular fa-square-check";"></i> Done <p>`
 ) {
   const errorDiv = document.createElement("span");
   errorDiv.classList.add("error");
@@ -63,22 +61,18 @@ export function validateInput(
     callback(domEl.value)
       ? (domEl.validated = true)
       : (domEl.validated = false);
-    if (domElements.length > 0) {
-      isFormValidated(button, domElements);
-    }
   });
 }
 
-export function isFormValidated(button, domElements) {
+export function isFormValidated(...domElements) {
   let allPassedValidation = 0;
   domElements.forEach((element) => {
     if (element.validated) {
       allPassedValidation++;
+      console.log(allPassedValidation, domElements.length);
     }
   });
-  allPassedValidation === domElements.length
-    ? (button.disabled = false)
-    : (button.disabled = true);
+  return allPassedValidation === domElements.length ? true : false;
 }
 
 //first domel = content, second = author, third subject will get the same prop name as the input name

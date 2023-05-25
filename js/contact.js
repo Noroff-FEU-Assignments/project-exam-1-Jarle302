@@ -40,14 +40,17 @@ validateInput(
   (value) => value.trim().length > 25,
   document.querySelector("#input--message"),
   "message needs to be atleast 26 characters",
-  ` <p class="success-message" ><i class="fa-regular fa-square-check";"></i> Done <p>`,
-  document.querySelector(".btn"),
-  document.querySelector("#input--name"),
-  document.querySelector("#input--email"),
-  document.querySelector("#input--subject"),
-  document.querySelector("#input--message")
+  ` <p class="success-message" ><i class="fa-regular fa-square-check";"></i> Done <p>`
 );
 
 document.querySelector(".btn").addEventListener("click", (e) => {
-  postToWP(e, "798", "modal--contact", "form--contact", "spinner");
+  e.preventDefault();
+  isFormValidated(
+    document.querySelector("#input--name"),
+    document.querySelector("#input--email"),
+    document.querySelector("#input--subject"),
+    document.querySelector("#input--message")
+  )
+    ? postToWP(e, "798", "modal--contact", "form--contact", "spinner")
+    : console.log("error");
 });

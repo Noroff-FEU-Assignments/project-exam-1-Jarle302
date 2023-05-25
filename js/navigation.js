@@ -1,4 +1,4 @@
-import { postToWP, validateInput } from "./imports.js";
+import { postToWP, validateInput, isFormValidated } from "./imports.js";
 
 function renderNavigation(domEl, ...links) {
   document.querySelector(domEl).innerHTML = `<nav class="nav--main wrapper">
@@ -88,7 +88,7 @@ document.querySelector(
     type="text"
     placeholder="yourEmail@email.com"
   />
-  <button disabled=true class="btn btn--alternate btn--footer">Subscribe!</button></div>
+  <button  class="btn btn--alternate btn--footer">Subscribe!</button></div>
   </form>
   <p class="footer__p--copyright"> Copyright © Jarle Tollaksen 2023</p>;
   <div class="modal--subscribe">
@@ -104,7 +104,9 @@ document.querySelector("#input--subscribe").addEventListener("focus", () => {
 });
 
 document.querySelector(".btn--footer").addEventListener("click", (e) => {
-  postToWP(e, "822", "modal--subscribe", "form--subscribe", "spinner--nav");
+  isFormValidated(document.querySelector("#input--subscribe"))
+    ? postToWP(e, "822", "modal--subscribe", "form--subscribe", "spinner--nav")
+    : console.log("error");
 });
 
 //regex gotten from chatGPT
@@ -112,9 +114,7 @@ validateInput(
   (value) => /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(value),
   document.querySelector("#input--subscribe"),
   "Please input a valid email address",
-  ` <p class="success-message" ><i class="fa-regular fa-square-check";"></i> Done <p>`,
-  document.querySelector(".btn--footer"),
-  document.querySelector("#input--subscribe")
+  ` <p class="success-message" ><i class="fa-regular fa-square-check";"></i> Done <p>`
 );
 
 document
