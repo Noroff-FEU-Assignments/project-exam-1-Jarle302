@@ -12,7 +12,7 @@
 .slides--container--textbox {
   overflow: hidden;
   background-color: var(--fourth-color);
-  min-height: 94px;
+  height: 100px;
 }
 
 .slides__p--breadtext {
