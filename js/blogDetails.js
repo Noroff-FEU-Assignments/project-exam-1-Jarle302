@@ -73,5 +73,5 @@ fetch(`https://jarleblogg.no/wp-json/wp/v2/comments/?post=${blogID}`)
         )
       : (document.querySelector(
           ".comments--container"
-        ).innerHTML += `<div class="blog--comment"> <h3>Be the first to comment!</h3> </div>`);
+        ).innerHTML += `<div class="blog--comment"> <h3 class="comment-placeholder">Be the first to comment!</h3> </div>`);
   });

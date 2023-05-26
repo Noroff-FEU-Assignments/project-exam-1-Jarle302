@@ -132,13 +132,20 @@ export function renderComment(
   domEl,
   { author_name, author_avatar_urls, date, content }
 ) {
-  domEl.insertAdjacentHTML(
-    "afterbegin",
-    `<div class="blog--comment"> <div class="user-info">  <h3> <img class="comments--avatar" src="${
-      author_avatar_urls[24]
-    }" alt=""> ${author_name} <span class="comments--date">${date.replace(
-      "-05T17",
-      ""
-    )}</span></h3></div> ${content.rendered} </div> `
-  );
+  domEl.contains(document.querySelector(".comment-placeholder"))
+    ? (domEl.innerHTML = `<div class="blog--comment"> <div class="user-info">  <h3> <img class="comments--avatar" src="${
+        author_avatar_urls[24]
+      }" alt=""> ${author_name} <span class="comments--date">${date.replace(
+        "-05T17",
+        ""
+      )}</span></h3></div> ${content.rendered} </div> `)
+    : domEl.insertAdjacentHTML(
+        "afterbegin",
+        `<div class="blog--comment"> <div class="user-info">  <h3> <img class="comments--avatar" src="${
+          author_avatar_urls[24]
+        }" alt=""> ${author_name} <span class="comments--date">${date.replace(
+          "-05T17",
+          ""
+        )}</span></h3></div> ${content.rendered} </div> `
+      );
 }
