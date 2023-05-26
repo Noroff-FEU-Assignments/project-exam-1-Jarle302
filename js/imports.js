@@ -87,7 +87,10 @@ export function postComment(postID, ...domElements) {
     body: JSON.stringify({ content, author_name, post }),
   })
     .then((res) => res.json())
-    .then((data) => console.log(data));
+    .then((data) => {
+      console.log(data),
+        renderComment(document.querySelector(".comments--container"), data);
+    });
 }
 
 //modal
@@ -123,4 +126,19 @@ export function postToWP(e, id, modal, form, spinner) {
       document.querySelector(`.${spinner}`).style.display = "none";
       closeModal(`${modal}`);
     });
+}
+
+export function renderComment(
+  domEl,
+  { author_name, author_avatar_urls, date, content }
+) {
+  domEl.insertAdjacentHTML(
+    "afterbegin",
+    `<div class="blog--comment"> <div class="user-info">  <h3> <img class="comments--avatar" src="${
+      author_avatar_urls[24]
+    }" alt=""> ${author_name} <span class="comments--date">${date.replace(
+      "-05T17",
+      ""
+    )}</span></h3></div> ${content.rendered} </div> `
+  );
 }

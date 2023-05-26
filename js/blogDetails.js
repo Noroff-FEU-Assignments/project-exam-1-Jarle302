@@ -1,4 +1,10 @@
-import { baseURL, password, username, postComment } from "./imports.js";
+import {
+  baseURL,
+  password,
+  username,
+  postComment,
+  renderComment,
+} from "./imports.js";
 const queryString = document.location.search;
 const parameters = new URLSearchParams(queryString);
 const blogID = parameters.get("id");
