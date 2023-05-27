@@ -12,9 +12,8 @@ section {
   display: none;
   position: fixed;
   height: 100%;
-  width: 100%;
+  width: auto;
   backdrop-filter: blur(2px);
-  display: flex;
   align-items: center;
   justify-content: center;
 }

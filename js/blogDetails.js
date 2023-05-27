@@ -22,7 +22,7 @@ fetch(`${baseURL}${blogID}`, {
       img.addEventListener("click", (e) => {
         e.stopPropagation();
         console.log({ img });
-        document.querySelector(".img-modal").style.display = "block";
+        document.querySelector(".img-modal").style.display = "flex";
         document.querySelector(".img-modal__img").src = img.src;
         document.querySelector(".img-modal__img").alt = img.alt;
       });
