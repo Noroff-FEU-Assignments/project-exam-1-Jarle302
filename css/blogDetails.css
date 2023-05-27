@@ -8,6 +8,10 @@ section {
   padding: 20px;
 }
 
+p {
+  line-height: 1.5;
+}
+
 .img-modal {
   display: none;
   position: fixed;
