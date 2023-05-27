@@ -26,9 +26,9 @@ fetch(`${baseURL}${blogID}`, {
         document.querySelector(".img-modal__img").src = img.src;
         document.querySelector(".img-modal__img").alt = img.alt;
       });
-      //gotten from chat-gpt
+
       document.addEventListener("click", (e) => {
-        if (!document.querySelector(".img-modal").contains(e.target)) {
+        if (document.querySelector(".img-modal__img") !== e.target) {
           document.querySelector(".img-modal").style.display = "none";
         }
       });
