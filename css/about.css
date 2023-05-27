@@ -40,10 +40,6 @@ h3 {
   margin: 15px;
 }
 
-.bread-text {
-  line-height: 1.5;
-}
-
 .contact--btn {
   margin: 0 15px 15px 15px;
 }
@@ -57,6 +53,7 @@ h3 {
 
 p {
   max-width: 560px;
+  line-height: 1.5;
 }
 
 @media screen and (max-width: 850px) {
