@@ -130,6 +130,8 @@ p {
   width: 100px;
   height: 100px;
   display: none;
+  position: absolute;
+  z-index: 3000;
 }
 
 .spinner::after {
