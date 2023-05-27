@@ -11,9 +11,10 @@ section {
 .img-modal {
   display: none;
   position: fixed;
-  height: 76%;
+  height: 92%;
   backdrop-filter: blur(2px);
   width: fit-content;
+  bottom: 10px;
 }
 
 img {
