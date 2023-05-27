@@ -21,7 +21,7 @@ img {
 }
 
 .img-modal__img {
-  width: 100%;
+  width: 90%;
   height: 75%;
   object-fit: cover;
 }
