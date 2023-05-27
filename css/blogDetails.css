@@ -23,9 +23,9 @@ img {
 }
 
 .img-modal__img {
-  width: 80%;
-  height: 80%;
-  object-fit: cover;
+  height: 70%;
+  object-fit: contain;
+  width: fit-content;
 }
 
 .img-modal__button--exit {
