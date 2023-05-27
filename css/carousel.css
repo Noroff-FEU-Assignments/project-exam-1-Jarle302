@@ -12,11 +12,8 @@
 .slides--container--textbox {
   overflow: hidden;
   background-color: var(--fourth-color);
-  height: 100px;
-}
-
-.slides__p--breadtext {
-  display: none;
+  height: 72px;
+  transition: max-height 2000ms ease-in-out;
 }
 
 .active {
