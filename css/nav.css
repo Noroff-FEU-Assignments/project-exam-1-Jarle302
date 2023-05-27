@@ -21,6 +21,7 @@ header {
   display: flex;
   align-items: center;
   gap: 25px;
+  padding-right: 10px;
 }
 
 .logo-image {
@@ -63,6 +64,7 @@ nav {
   }
 
   .nav__ul {
+    padding-right: 0;
     display: flex;
     position: fixed;
     background-color: #2e2e2efc;
