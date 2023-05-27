@@ -180,6 +180,7 @@ button:hover {
 .footer__h2 {
   flex-basis: 100%;
   text-align: center;
+  font-size: 1.4rem;
 }
 .social-media-icons {
   color: white;
