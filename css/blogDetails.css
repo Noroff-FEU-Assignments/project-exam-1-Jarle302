@@ -29,11 +29,6 @@ img {
   width: fit-content;
 }
 
-.img-modal__button--exit {
-  position: absolute;
-  right: 0;
-}
-
 form {
   display: flex;
   flex-direction: column;

@@ -38,12 +38,6 @@ fetch(`${baseURL}${blogID}`, {
 );
 
 document
-  .querySelector(".img-modal__button--exit")
-  .addEventListener("click", () => {
-    document.querySelector(".img-modal").style.display = "none";
-  });
-
-document
   .querySelector(".button--post-comment")
   .addEventListener("click", (e) => {
     e.preventDefault();
