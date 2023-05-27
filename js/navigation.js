@@ -61,9 +61,9 @@ document.querySelector(
   "footer"
 ).innerHTML = `<section class="wrapper footer__section">
 <h2 class="footer__h2">The Synthetic Scribe</h2>
-<div>
+<div class="footer--links-container">
   <a  href="/index.html"><img class="footer__img" src="/assets/logo.jpg" alt="Artwork of a pale human face, made out of what looks like a plaster like material" /img></a>
-  <div>
+  <div class="social-media-icon--container">
   <a aria-label="Facebook" class="social-media-icons" href="https://www.facebook.com/">
   <i class="fa-brands fa-facebook"></i>
   </a>
