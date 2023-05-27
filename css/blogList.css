@@ -99,4 +99,5 @@ h1 {
 
 .spinnerTwo {
   align-self: center;
+  position: static;
 }
