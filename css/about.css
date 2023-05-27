@@ -16,6 +16,18 @@ h2,
 h3 {
   margin: 20px 0 2px 0;
 }
+
+.portrait {
+  border-radius: 50%;
+  width: 166px;
+}
+
+.about--me {
+  max-width: 560px;
+  background: black;
+  border-radius: 10px;
+}
+
 @media screen and (max-width: 850px) {
   section {
     flex-direction: column;

@@ -2,7 +2,7 @@ import { postToWP, validateInput, isFormValidated } from "./imports.js";
 
 function renderNavigation(domEl, ...links) {
   document.querySelector(domEl).innerHTML = `<nav class="nav--main wrapper">
-  <a href="/index.html"> <img class="logo-image" src="/assets/logo.png" alt="Artwork of a pale human face, made out of what looks like a plaster like material" /> </a>
+  <a href="/index.html"> <img class="logo-image" src="/assets/logo.jpg" alt="Artwork of a pale human face, made out of what looks like a plaster like material" /> </a>
 
     <ul class="nav__ul">
     ${links
@@ -62,7 +62,7 @@ document.querySelector(
 ).innerHTML = `<section class="wrapper footer__section">
 <h2 class="footer__h2">The Synthetic Scribe</h2>
 <div>
-  <a  href="/index.html"><img class="footer__img" src="/assets/logo.png" alt="Artwork of a pale human face, made out of what looks like a plaster like material" /img></a>
+  <a  href="/index.html"><img class="footer__img" src="/assets/logo.jpg" alt="Artwork of a pale human face, made out of what looks like a plaster like material" /img></a>
   <div>
   <a aria-label="Facebook" class="social-media-icons" href="https://www.facebook.com/">
   <i class="fa-brands fa-facebook"></i>
