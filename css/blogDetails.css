@@ -87,5 +87,6 @@ label {
   .img-modal__img {
     height: 70%;
     width: 70%;
+    object-fit: cover;
   }
 }
