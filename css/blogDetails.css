@@ -11,9 +11,12 @@ section {
 .img-modal {
   display: none;
   position: fixed;
-  height: 100vh;
+  height: 100%;
+  width: 100%;
   backdrop-filter: blur(2px);
-  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 img {
