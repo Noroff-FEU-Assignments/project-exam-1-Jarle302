@@ -82,3 +82,9 @@ label {
 .user-info {
   padding-bottom: 10px;
 }
+
+@media screen and (max-width: 600px) {
+  .img-modal__img {
+    object-position: center center;
+  }
+}
