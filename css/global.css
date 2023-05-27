@@ -184,6 +184,7 @@ button:hover {
   flex-basis: 100%;
   text-align: center;
   font-size: 1.4rem;
+  margin-top: 15px;
 }
 .social-media-icons {
   color: white;
