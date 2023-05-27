@@ -24,6 +24,7 @@ img {
   width: 90%;
   height: 60%;
   object-fit: contain;
+  background-color: black;
 }
 
 .img-modal__button--exit {
