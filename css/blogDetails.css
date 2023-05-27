@@ -23,7 +23,7 @@ img {
 .img-modal__img {
   width: 90%;
   height: 60%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .img-modal__button--exit {
