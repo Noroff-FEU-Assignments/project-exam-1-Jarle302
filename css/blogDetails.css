@@ -40,6 +40,10 @@ form {
   gap: 21px;
 }
 
+img:not(.logo-image) {
+  cursor: pointer;
+}
+
 .comments--avatar {
   width: 45px;
   border-radius: 50px;

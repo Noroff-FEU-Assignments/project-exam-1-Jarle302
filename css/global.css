@@ -208,6 +208,10 @@ button:hover {
   gap: 40px;
 }
 
+.form--subscribe .error {
+  position: absolute;
+}
+
 .social-media-icon--container {
   display: flex;
   flex-direction: column;
