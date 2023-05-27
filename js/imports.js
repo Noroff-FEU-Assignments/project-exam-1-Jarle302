@@ -77,6 +77,7 @@ export function isFormValidated(...domElements) {
 
 //first domel = content, second = author, third subject will get the same prop name as the input name
 export function postComment(postID, ...domElements) {
+  document.querySelector(".spinner--two").style.display = "block";
   const content = domElements[0].value;
   const author_name = domElements[1].value;
   const post = postID;
@@ -90,6 +91,7 @@ export function postComment(postID, ...domElements) {
     .then((data) => {
       console.log(data),
         renderComment(document.querySelector(".comments--container"), data);
+      document.querySelector(".spinner--two").style.display = "none";
     });
 }
 

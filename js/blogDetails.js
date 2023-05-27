@@ -54,6 +54,7 @@ document
     );
   });
 
+document.querySelector(".spinner--two").style.display = "block";
 fetch(`https://jarleblogg.no/wp-json/wp/v2/comments/?post=${blogID}`)
   .then((res) => res.json())
   .then((data) => {
@@ -74,4 +75,5 @@ fetch(`https://jarleblogg.no/wp-json/wp/v2/comments/?post=${blogID}`)
       : (document.querySelector(
           ".comments--container"
         ).innerHTML += `<div class="blog--comment"> <h3 class="comment-placeholder">Be the first to comment!</h3> </div>`);
+    document.querySelector(".spinner--two").style.display = "none";
   });
