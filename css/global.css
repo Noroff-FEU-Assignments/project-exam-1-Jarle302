@@ -248,3 +248,9 @@ button {
 .margin--top {
   padding-top: 84px;
 }
+
+@media screen and (max-width: 550px) {
+  .footer__div--subscribe {
+    flex-basis: 100%;
+  }
+}
