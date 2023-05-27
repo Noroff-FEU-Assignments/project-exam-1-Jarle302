@@ -13,7 +13,7 @@ section {
   position: fixed;
   height: 100vh;
   backdrop-filter: blur(2px);
-  width: fit-content;
+  width: 90%;
 }
 
 img {
