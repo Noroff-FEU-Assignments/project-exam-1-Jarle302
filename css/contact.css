@@ -8,12 +8,14 @@
 }
 
 .contact__section {
-  padding: 50px 0;
+  padding-block: 50px;
+  height: 100vh;
   width: 100%;
   margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .input--contact {
