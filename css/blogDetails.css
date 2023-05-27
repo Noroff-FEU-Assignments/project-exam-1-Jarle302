@@ -86,5 +86,6 @@ label {
 @media screen and (max-width: 600px) {
   .img-modal__img {
     height: 70%;
+    width: 70%;
   }
 }
