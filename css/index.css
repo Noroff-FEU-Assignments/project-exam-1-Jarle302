@@ -177,5 +177,6 @@
 
   .container {
     flex-direction: column-reverse;
+    justify-content: space-evenly;
   }
 }
