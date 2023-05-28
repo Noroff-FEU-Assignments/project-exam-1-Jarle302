@@ -30,6 +30,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 13px;
 }
 
 .index__hero--image {
@@ -172,5 +173,9 @@
   }
   .container--bottom {
     gap: 40px;
+  }
+
+  .container {
+    flex-direction: column-reverse;
   }
 }
