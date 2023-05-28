@@ -21,7 +21,14 @@
 }
 
 .social-media--contact a {
+  width: fit-content;
   font-size: 3rem;
+  transition: transform 200ms ease-in;
+}
+
+.social-media--contact a:hover {
+  transition: transform 400ms ease-in-out;
+  transform: translateY(-4px);
 }
 
 .input--contact {
@@ -48,20 +55,13 @@ main {
 }
 
 .headers--container {
-  padding: 0 29px;
   margin-top: 80px;
+  margin-bottom: 23px;
 }
 
 section,
 h1 {
   margin: 0;
-}
-
-.contact--h1 {
-  font-size: 1.8rem;
-}
-.contact--h2 {
-  font-size: 1rem;
 }
 
 .contact--info {
@@ -75,4 +75,11 @@ h1 {
   position: fixed;
   top: 50%;
   left: 50%;
+}
+
+@media screen and (max-width: 900px) {
+  .contact__section {
+    flex-direction: column;
+    align-items: center;
+  }
 }
