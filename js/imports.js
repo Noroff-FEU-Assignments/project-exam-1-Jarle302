@@ -89,13 +89,34 @@ export function postComment(postID, ...domElements) {
   })
     .then((res) => res.json())
     .then((data) => {
-      console.log(data),
-        renderComment(document.querySelector(".comments--container"), data);
+      data.message
+        ? modalMessage(
+            document.querySelector(".comments--container"),
+            data.message,
+            true
+          )
+        : renderComment(document.querySelector(".comments--container"), data);
       document.querySelector(".spinner--two").style.display = "none";
+    })
+    .catch((error) => {
+      console.log(error);
     });
 }
 
 //modal
+export function modalMessage(domEl, message, warning = false) {
+  if (domEl.querySelector(".modal--function")) {
+    domEl.querySelector(".modal--function").innerHTML = `<h3 class="${
+      warning ? "modal--error" : "modal--success"
+    }">${message}</h3></div>`;
+    domEl.querySelector(".modal--function").style.display = "block";
+  } else {
+    domEl.innerHTML += `<div class="modal--function"> <h3 class="${
+      warning ? "modal--error" : "modal--success"
+    }">${message}</h3></div>`;
+  }
+  closeModal("modal--function");
+}
 
 export function closeModal(modalClass) {
   document.addEventListener("click", (e) => {

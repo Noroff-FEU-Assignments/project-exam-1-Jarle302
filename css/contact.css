@@ -1,10 +1,10 @@
 .form--contact {
   display: flex;
   flex-direction: column;
-  border-radius: 23px;
   background-color: white;
   width: 266px;
   padding: 29px;
+  border-radius: 8px;
 }
 
 .contact__section {
@@ -24,11 +24,14 @@
   outline: none;
   background: #ffffff;
   max-width: 309px;
+  border-radius: 8px;
+  padding: 5px;
 }
 
 textarea {
   border: 1px solid var(--third-color);
   max-width: 309px;
+  border-radius: 8px;
 }
 
 main {
