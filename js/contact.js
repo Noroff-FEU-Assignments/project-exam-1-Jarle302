@@ -50,7 +50,5 @@ document.querySelector(".btn").addEventListener("click", (e) => {
     document.querySelector("#input--email"),
     document.querySelector("#input--subject"),
     document.querySelector("#input--message")
-  )
-    ? postToWP(e, "798", "modal--contact", "form--contact", "spinner")
-    : console.log("error");
+  ) && postToWP(e, "798", "modal--contact", "form--contact", "spinner");
 });

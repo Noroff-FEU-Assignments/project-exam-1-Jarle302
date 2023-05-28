@@ -52,7 +52,6 @@ function fetchBlogposts() {
       pageNum = 1;
       document.querySelector(".blog-list__section--container").innerHTML = "";
     }
-    console.log(order);
     let url = `https://jarleblogg.no/wp-json/wp/v2/posts?_embed&order=${order}&page=${pageNum}`;
 
     if (search) {
@@ -69,9 +68,7 @@ function fetchBlogposts() {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         if (data.message) {
-          console.log(data);
           modalMessage(
             document.querySelector(".blog-list__section--container"),
             "You've have reached in the end of our posts, the blog will generate a new post tomrrow for your entertainment",

@@ -13,7 +13,6 @@ fetch(`${baseURL}?_embed`, {
   headers: { Authorization: "Basic " + btoa(`${username}:${password}`) },
 }).then((res) =>
   res.json().then((data) => {
-    console.log(data);
     const parsedPosts = processResponse(data);
     parsedPosts.forEach((element) =>
       renderBlogPosts(
@@ -33,7 +32,7 @@ fetch(`${baseURL}?_embed`, {
     document.querySelector(".spinner").style.display = "none";
   })
 );
-//carousel code, returns three functions, destructure them out, state is kept in a closure. 
+//carousel code, returns three functions, destructure them out, state is kept in a closure.
 function carouselState() {
   let indexCount = 0;
   function increment(arr) {
@@ -42,7 +41,6 @@ function carouselState() {
         return (indexCount = 0);
       }
     }
-    console.log(indexCount + 1);
     return indexCount++;
   }
   function decrement(arr) {
@@ -51,12 +49,10 @@ function carouselState() {
         return (indexCount = arr.length - 1);
       }
     }
-    console.log(indexCount - 1);
     return indexCount--;
   }
 
   function changeSlides(callback, arr) {
-    console.log(indexCount);
     arr[indexCount].classList.remove("active");
     callback(arr);
     arr[indexCount].classList.add("active");

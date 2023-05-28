@@ -12,7 +12,6 @@ const parameters = new URLSearchParams(queryString);
 const blogID = parameters.get("id");
 document.querySelector(".spinner").style.display = "block";
 
-
 //fetch the specific blogpost
 fetch(`${baseURL}${blogID}`, {
   method: "GET",
@@ -25,12 +24,10 @@ fetch(`${baseURL}${blogID}`, {
     document.querySelectorAll("img").forEach((img) => {
       img.addEventListener("click", (e) => {
         e.stopPropagation();
-        console.log({ img });
         document.querySelector(".img-modal").style.display = "flex";
         document.querySelector(".img-modal__img").src = img.src;
         document.querySelector(".img-modal__img").alt = img.alt;
       });
-
 
       //add eventlistener to be able to close the modal
       document.addEventListener("click", (e) => {
@@ -53,7 +50,6 @@ document
       document.querySelector("#username--comments")
     );
   });
-
 
 //display spinner and fetch comments linked to the specific blogpost
 document.querySelector(".spinner--two").style.display = "block";

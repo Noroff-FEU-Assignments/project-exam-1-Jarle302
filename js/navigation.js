@@ -1,6 +1,5 @@
 import { postToWP, validateInput, isFormValidated } from "./imports.js";
 
-
 //render the nav with any number of links, the paths are passed as arguments
 function renderNavigation(domEl, ...links) {
   document.querySelector(domEl).innerHTML = `<nav class="nav--main wrapper">
@@ -43,7 +42,6 @@ document
 document
   .querySelector(".hamburger-menu__button")
   .addEventListener("click", () => {
-    console.log("clicked");
     document.querySelector(".nav__ul").classList.toggle("visible");
   });
 
@@ -52,7 +50,6 @@ function isActive(element) {
     window.location.pathname.split("/").length === 2
       ? window.location.pathname.split("/")[1].split(".")[0]
       : window.location.pathname.split("/")[2].split(".")[0];
-  console.log(window.location.pathname);
   return url ===
     element.href.split("/")[element.href.split("/").length - 1].split(".")[0]
     ? true
@@ -107,9 +104,8 @@ document.querySelector("#input--subscribe").addEventListener("focus", () => {
 
 document.querySelector(".btn--footer").addEventListener("click", (e) => {
   e.preventDefault();
-  isFormValidated(document.querySelector("#input--subscribe"))
-    ? postToWP(e, "822", "modal--subscribe", "form--subscribe", "spinner--nav")
-    : console.log("error");
+  isFormValidated(document.querySelector("#input--subscribe")) &&
+    postToWP(e, "822", "modal--subscribe", "form--subscribe", "spinner--nav");
 });
 
 //regex gotten from chatGPT
