@@ -145,16 +145,13 @@
   color: white;
 }
 
-.testimonials {
-  display: block;
-}
-
 .index__section--updates {
   display: block;
 }
 
 .testimonials {
   max-width: 400px;
+  display: block;
 }
 
 .user-info {

@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   padding-bottom: 40px;
+  gap: 80px;
 }
 
 .about--textbox {

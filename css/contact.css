@@ -9,13 +9,19 @@
 
 .contact__section {
   padding-block: 50px;
-  height: 100vh;
   width: 100%;
   margin: auto;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.social-media--contact {
+  gap: 30px;
+}
+
+.social-media--contact a {
+  font-size: 3rem;
 }
 
 .input--contact {
@@ -24,7 +30,6 @@
   outline: none;
   background: #ffffff;
   max-width: 309px;
-  border-radius: 8px;
   padding: 5px;
 }
 
@@ -52,8 +57,18 @@ h1 {
   margin: 0;
 }
 
-h2 {
+.contact--h1 {
+  font-size: 1.8rem;
+}
+.contact--h2 {
   font-size: 1rem;
+}
+
+.contact--info {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
 }
 
 .spinner--contact {

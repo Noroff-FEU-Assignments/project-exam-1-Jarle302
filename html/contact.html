@@ -41,44 +41,72 @@
   <body>
     <header></header>
     <main>
-      <section class="wrapper contact__section">
-        <div class="headers--container">
-          <h1>Let's Connect</h1>
-          <h2>(We Promise Not to Crash)</h2>
-        </div>
-        <form class="form--contact" action="POST">
-          <label for="input--name">Name</label>
-          <input
-            class="input--contact"
-            name="your-name"
-            id="input--name"
-            type="text" />
-          <label for="input--email">Email</label>
-          <input
-            class="input--contact"
-            name="your-email"
-            id="input--email"
-            type="text" />
-          <label for="input--subject">Subject</label>
-          <input
-            class="input--contact"
-            name="your-subject"
-            id="input--subject"
-            type="text" />
-          <label for="input--message">Message</label>
-          <textarea
-            name="your-message"
-            id="input--message"
-            cols="30"
-            rows="10"></textarea>
-          <button class="btn">Send</button>
-        </form>
-        <div class="spinner spinner--contact"></div>
-        <div class="modal--contact">
-          <h2>Success</h2>
-          <p>Your message has been sent, thank you for your message!</p>
-        </div>
-      </section>
+      <div class="wrapper contact__section">
+        <section>
+          <div class="headers--container">
+            <h1 class="contact--h1">Let's Connect</h1>
+            <h2 class="contact--h2">(We Promise Not to Crash)</h2>
+          </div>
+          <form class="form--contact" action="POST">
+            <label for="input--name">Name</label>
+            <input
+              class="input--contact"
+              name="your-name"
+              id="input--name"
+              type="text" />
+            <label for="input--email">Email</label>
+            <input
+              class="input--contact"
+              name="your-email"
+              id="input--email"
+              type="text" />
+            <label for="input--subject">Subject</label>
+            <input
+              class="input--contact"
+              name="your-subject"
+              id="input--subject"
+              type="text" />
+            <label for="input--message">Message</label>
+            <textarea
+              name="your-message"
+              id="input--message"
+              cols="30"
+              rows="10"></textarea>
+            <button class="btn btn--alternate">Send</button>
+          </form>
+          <div class="spinner spinner--contact"></div>
+          <div class="modal--contact">
+            <h2>Success</h2>
+            <p>Your message has been sent, thank you for your message!</p>
+          </div>
+        </section>
+        <section class="contact--info">
+          <h2>Contact info</h2>
+          <p><i class="fa-solid fa-phone"></i> 450 46 326</p>
+          <p><i class="fa-regular fa-envelope"></i> jarlehtollaksen2@live.no</p>
+          <div class="social-media-icon--container social-media--contact">
+            <h3>Our follow us on social media!</h3>
+            <a
+              aria-label="Facebook"
+              class="social-media-icons"
+              href="https://www.facebook.com/">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a
+              aria-label="Instagram"
+              class="social-media-icons"
+              href="https://www.instagram.com">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a
+              aria-label="Twitter"
+              class="social-media-icons"
+              href="https://www.twitter.com">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+          </div>
+        </section>
+      </div>
     </main>
     <footer></footer>
   </body>
