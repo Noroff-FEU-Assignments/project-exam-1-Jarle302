@@ -65,7 +65,7 @@ export function validateInput(
       : (domEl.validated = false);
   });
 }
-//checks if all forms have gotten through validation, needed this in addition to the other 
+//checks if all forms have gotten through validation, needed this in addition to the other
 // function to check before posting, if i didnt have this, the user needed to trigger the blur
 // event manually before pressing the button.
 export function isFormValidated(...domElements) {
@@ -103,12 +103,15 @@ export function postComment(postID, ...domElements) {
       document.querySelector(".spinner--two").style.display = "none";
     })
     .catch((error) => {
-      console.log(error);
+      modalMessage(
+        document.querySelector("main"),
+        "there was an error, sorry for the inconvenience"
+      );
     });
 }
 
 //checks if a modal with the given class exists, if not it creates one
-//then sets the modals innerhtml to the  message passed as the second argument. 
+//then sets the modals innerhtml to the  message passed as the second argument.
 // third argument is that be able to change the styling based on the importance of the message
 export function modalMessage(domEl, message, warning = false) {
   if (domEl.querySelector(".modal--function")) {
@@ -159,7 +162,7 @@ export function postToWP(e, id, modal, form, spinner) {
     });
 }
 
-//function to render the newly posted comment to the dom without needing to 
+//function to render the newly posted comment to the dom without needing to
 //use another get request.
 export function renderComment(
   domEl,

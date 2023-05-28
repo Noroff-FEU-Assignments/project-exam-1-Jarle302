@@ -4,6 +4,7 @@ import {
   username,
   postComment,
   renderComment,
+  modalMessage,
 } from "./imports.js";
 
 //get the correct blog id to be used when fetching the specific blog post
@@ -16,29 +17,36 @@ document.querySelector(".spinner").style.display = "block";
 fetch(`${baseURL}${blogID}`, {
   method: "GET",
   headers: { Authorization: "Basic " + btoa(`${username}:${password}`) },
-}).then((res) =>
-  res.json().then((data) => {
-    document.title = `The Synthetic Scribe ||${data.title.rendered}`;
-    document.querySelector(".blog__div--container").innerHTML =
-      data.content.rendered;
-    document.querySelectorAll("img").forEach((img) => {
-      img.addEventListener("click", (e) => {
-        e.stopPropagation();
-        document.querySelector(".img-modal").style.display = "flex";
-        document.querySelector(".img-modal__img").src = img.src;
-        document.querySelector(".img-modal__img").alt = img.alt;
-      });
+})
+  .then((res) =>
+    res.json().then((data) => {
+      document.title = `The Synthetic Scribe ||${data.title.rendered}`;
+      document.querySelector(".blog__div--container").innerHTML =
+        data.content.rendered;
+      document.querySelectorAll("img").forEach((img) => {
+        img.addEventListener("click", (e) => {
+          e.stopPropagation();
+          document.querySelector(".img-modal").style.display = "flex";
+          document.querySelector(".img-modal__img").src = img.src;
+          document.querySelector(".img-modal__img").alt = img.alt;
+        });
 
-      //add eventlistener to be able to close the modal
-      document.addEventListener("click", (e) => {
-        if (document.querySelector(".img-modal__img") !== e.target) {
-          document.querySelector(".img-modal").style.display = "none";
-        }
+        //add eventlistener to be able to close the modal
+        document.addEventListener("click", (e) => {
+          if (document.querySelector(".img-modal__img") !== e.target) {
+            document.querySelector(".img-modal").style.display = "none";
+          }
+        });
       });
-    });
-    document.querySelector(".spinner").style.display = "none";
-  })
-);
+      document.querySelector(".spinner").style.display = "none";
+    })
+  )
+  .catch((error) =>
+    modalMessage(
+      document.querySelector(".blog__div--container"),
+      "there was an error, sorry for the inconvenience."
+    )
+  );
 
 document
   .querySelector(".button--post-comment")
@@ -74,4 +82,10 @@ fetch(`https://jarleblogg.no/wp-json/wp/v2/comments/?post=${blogID}`)
           ".comments--container"
         ).innerHTML += `<div class="blog--comment"> <h3 class="comment-placeholder">Be the first to comment!</h3> </div>`);
     document.querySelector(".spinner--two").style.display = "none";
-  });
+  })
+  .catch((error) =>
+    modalMessage(
+      document.querySelector(".blog__div--container"),
+      "there was an error, sorry for the inconvenience."
+    )
+  );

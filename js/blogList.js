@@ -94,7 +94,10 @@ function fetchBlogposts() {
         pageNum++;
       })
       .catch((err) => {
-        console.log(err);
+        modalMessage(
+          document.querySelector(".blog-list__section--container"),
+          "Sorry, there are no more posts"
+        );
         document
           .querySelectorAll(".spinnerTwo")
           .forEach((element) => (element.style.display = "none"));
