@@ -62,7 +62,7 @@ document.querySelector(
 ).innerHTML = `<section class="wrapper footer__section">
 <h2 class="footer__h2">The Synthetic Scribe</h2>
 <div class="footer--links-container">
-  <a  href="/index.html"><img class="footer__img" src="/assets/logo.jpg" alt="Artwork of a pale human face, made out of what looks like a plaster like material" /img></a>
+  <a  href="/index.html"><img class="footer__img" src="/assets/logo.jpg" alt="Artwork of a pale human face, made out of what looks like a plaster like material"></a>
   <div class="social-media-icon--container">
   <a aria-label="Facebook" class="social-media-icons" href="https://www.facebook.com/">
   <i class="fa-brands fa-facebook"></i>
@@ -90,12 +90,12 @@ document.querySelector(
   />
   <button  class="btn btn--alternate btn--footer">Subscribe!</button></div>
   </form>
-  <p class="footer__p--copyright"> Copyright © Jarle Tollaksen 2023</p>;
+  <p class="footer__p--copyright"> Copyright © Jarle Tollaksen 2023</p>
   <div class="modal--subscribe">
           <h2>Success</h2>
           <p>You have successfully subscribed!</p>
         </div>
-  </section>;
+  </section>
   `;
 
 document.querySelector("#input--subscribe").addEventListener("focus", () => {

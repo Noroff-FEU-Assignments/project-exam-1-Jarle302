@@ -13,9 +13,6 @@ header {
   align-items: center;
 }
 
-.nav--main img {
-}
-
 .nav__ul {
   list-style: none;
   display: flex;
@@ -87,4 +84,3 @@ nav {
     translate: 0;
   }
 }
-
