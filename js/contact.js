@@ -13,7 +13,7 @@ validateInput(
   document.querySelector("#input--message")
 );
 
-//regen gotten from chatGPT
+//regex gotten from chatGPT
 validateInput(
   (value) => /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(value),
   document.querySelector("#input--email"),

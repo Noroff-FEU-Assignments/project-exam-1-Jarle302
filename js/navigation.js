@@ -1,5 +1,7 @@
 import { postToWP, validateInput, isFormValidated } from "./imports.js";
 
+
+//render the nav with any number of links, the paths are passed as arguments
 function renderNavigation(domEl, ...links) {
   document.querySelector(domEl).innerHTML = `<nav class="nav--main wrapper">
   <a href="/index.html"> <img class="logo-image" src="/assets/logo.jpg" alt="Artwork of a pale human face, made out of what looks like a plaster like material" /> </a>

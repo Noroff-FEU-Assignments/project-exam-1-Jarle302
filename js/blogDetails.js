@@ -5,11 +5,15 @@ import {
   postComment,
   renderComment,
 } from "./imports.js";
+
+//get the correct blog id to be used when fetching the specific blog post
 const queryString = document.location.search;
 const parameters = new URLSearchParams(queryString);
 const blogID = parameters.get("id");
 document.querySelector(".spinner").style.display = "block";
 
+
+//fetch the specific blogpost
 fetch(`${baseURL}${blogID}`, {
   method: "GET",
   headers: { Authorization: "Basic " + btoa(`${username}:${password}`) },
@@ -27,6 +31,8 @@ fetch(`${baseURL}${blogID}`, {
         document.querySelector(".img-modal__img").alt = img.alt;
       });
 
+
+      //add eventlistener to be able to close the modal
       document.addEventListener("click", (e) => {
         if (document.querySelector(".img-modal__img") !== e.target) {
           document.querySelector(".img-modal").style.display = "none";
@@ -48,6 +54,8 @@ document
     );
   });
 
+
+//display spinner and fetch comments linked to the specific blogpost
 document.querySelector(".spinner--two").style.display = "block";
 fetch(`https://jarleblogg.no/wp-json/wp/v2/comments/?post=${blogID}`)
   .then((res) => res.json())

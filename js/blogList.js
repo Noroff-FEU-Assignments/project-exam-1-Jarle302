@@ -7,6 +7,7 @@ import {
   modalMessage,
 } from "./imports.js";
 
+//init searchobject to be used when searcing or ordering the blogposts(when making the api call)
 let searchObject = {
   order: "desc",
   search: "",
@@ -36,6 +37,9 @@ document
     fetchBlog(searchObject);
   });
 
+//function to fetchblopost is using the search object to change the api call accordingly
+// the function returns a function that keeps track of its state, so than when you
+// press view more you will get correct next page.
 function fetchBlogposts() {
   document.querySelector(".spinnerTwo").style.display = "block";
   let pageNum = 1;
@@ -110,6 +114,5 @@ orderByButton.addEventListener("click", (e) => {
   document.querySelector(".spinnerTwo").style.display = "block";
   searchObject.order =
     document.querySelector(`input[name="sortByDate"]:checked`).value || "desc";
-  console.log(searchObject);
   fetchBlog(searchObject, true);
 });

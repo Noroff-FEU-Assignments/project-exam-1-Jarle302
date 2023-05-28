@@ -2,7 +2,8 @@ export const username = "jarlehtollaksen2@live.no";
 export const password = `5PWI pcln 2hoE 1Tid H0Nn UfOl`;
 export const baseURL = "https://jarleblogg.no/wp-json/wp/v2/posts/";
 
-/*Blog post content */
+/*render blogpost, set isbackgroundimg to true, 
+if you want the img to not be in an img tag, but be a background img instead*/
 export function renderBlogPosts(
   { title, text, imgURL, date, modified, id, alt },
   domEl,
@@ -22,7 +23,7 @@ export function renderBlogPosts(
   }</p><h2 class="slides__h2">${title}</h2> <p class="slides__p--breadtext">${text}</p></div>
     </a> `;
 }
-
+//parsing the data to fit my needs
 export function processResponse(arr) {
   const newArr = [];
   arr.forEach((element) => {
@@ -46,7 +47,8 @@ export function processResponse(arr) {
   return newArr;
 }
 
-//I made this function for interaction design CA and reused it here.
+//I made this function for interaction design CA and reused it here. it validates
+// the input on blur
 export function validateInput(
   callback,
   domEl,
@@ -63,7 +65,9 @@ export function validateInput(
       : (domEl.validated = false);
   });
 }
-
+//checks if all forms have gotten through validation, needed this in addition to the other 
+// function to check before posting, if i didnt have this, the user needed to trigger the blur
+// event manually before pressing the button.
 export function isFormValidated(...domElements) {
   let allPassedValidation = 0;
   domElements.forEach((element) => {
@@ -103,7 +107,9 @@ export function postComment(postID, ...domElements) {
     });
 }
 
-//modal
+//checks if a modal with the given class exists, if not it creates one
+//then sets the modals innerhtml to the  message passed as the second argument. 
+// third argument is that be able to change the styling based on the importance of the message
 export function modalMessage(domEl, message, warning = false) {
   if (domEl.querySelector(".modal--function")) {
     domEl.querySelector(".modal--function").innerHTML = `<h3 class="${
@@ -118,6 +124,7 @@ export function modalMessage(domEl, message, warning = false) {
   closeModal("modal--function");
 }
 
+//since i have so many modals, i made a function to close them
 export function closeModal(modalClass) {
   document.addEventListener("click", (e) => {
     if (!document.querySelector(`.${modalClass}`).contains(e.target)) {
@@ -126,6 +133,7 @@ export function closeModal(modalClass) {
   });
 }
 
+//post contact to wp
 export function postToWP(e, id, modal, form, spinner) {
   e.preventDefault();
   const contactData = new FormData(document.querySelector(`.${form}`));
@@ -151,6 +159,8 @@ export function postToWP(e, id, modal, form, spinner) {
     });
 }
 
+//function to render the newly posted comment to the dom without needing to 
+//use another get request.
 export function renderComment(
   domEl,
   { author_name, author_avatar_urls, date, content }

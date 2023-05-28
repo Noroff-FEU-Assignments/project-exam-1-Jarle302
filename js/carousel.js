@@ -33,7 +33,7 @@ fetch(`${baseURL}?_embed`, {
     document.querySelector(".spinner").style.display = "none";
   })
 );
-
+//carousel code, returns three functions, destructure them out, state is kept in a closure. 
 function carouselState() {
   let indexCount = 0;
   function increment(arr) {
