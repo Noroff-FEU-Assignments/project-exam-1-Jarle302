@@ -108,7 +108,7 @@ export function modalMessage(domEl, message, warning = false) {
   if (domEl.querySelector(".modal--function")) {
     domEl.querySelector(".modal--function").innerHTML = `<h3 class="${
       warning ? "modal--error" : "modal--success"
-    }">${message}</h3></div>`;
+    }">${message}</h3>`;
     domEl.querySelector(".modal--function").style.display = "block";
   } else {
     domEl.innerHTML += `<div class="modal--function"> <h3 class="${

@@ -4,6 +4,7 @@ import {
   renderBlogPosts,
   processResponse,
   baseURL,
+  modalMessage,
 } from "./imports.js";
 
 let searchObject = {
@@ -64,6 +65,22 @@ function fetchBlogposts() {
     })
       .then((res) => res.json())
       .then((data) => {
+        console.log(data);
+        if (data.message) {
+          console.log(data);
+          modalMessage(
+            document.querySelector(".blog-list__section--container"),
+            "You've have reached in the end of our posts, the blog will generate a new post tomrrow for your entertainment",
+            true
+          );
+        }
+        if (data.length === 0) {
+          modalMessage(
+            document.querySelector(".blog-list__section--container"),
+            "Sorry! We couldn't find what you are looking for, please try again with a different search query",
+            true
+          );
+        }
         processResponse(data).forEach((element) =>
           renderBlogPosts(
             element,
@@ -82,9 +99,6 @@ function fetchBlogposts() {
           .forEach((element) => (element.style.display = "none"));
         return;
       });
-    // document.querySelector(".spinnerTwo").style.display = "none";
-
-    console.log(pageNum);
   }
   return fetchBlogList;
 }
