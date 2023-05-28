@@ -1,7 +1,7 @@
 .wrapper--index {
   display: flex;
   flex-direction: column;
-  gap: 120px;
+  gap: 10px;
   padding-block: 80px;
 }
 
